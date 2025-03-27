@@ -1,0 +1,59 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true" tabindex="-1">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+
+
+<h2 mat-dialog-title>
+    Chat with {{patientName}}
+    <h3>Test Date: {{testDate | date:'dd/MM/yyyy h:mm a'}}</h3>
+</h2>
+
+<mat-dialog-content #scrollable [scrollTop]="scrollable.scrollHeight">
+    <div *ngFor="let msg of currentMessages; trackBy: trackByCreated">
+        <div *ngIf="msg">
+
+            <div *ngIf="patientID == msg.senderID">
+                <mat-card class="container container-left">
+                    <div class="container-photo">
+                        <img src="../../../../assets/user.png" alt="Avatar" style="width:100%;">
+                    </div>
+                    <div class="container-text">
+                        <p> <b>{{ getSender(msg.senderID) }}</b> </p>
+                        <p class="content-left">{{ msg.content }}</p>
+                        <span class="time-right">{{ msg.createdAt | date:'dd/MM/yyyy h:mm a' }}</span>
+                    </div>
+                </mat-card>
+            </div>
+
+            <div *ngIf="userId == msg.senderID">
+                <mat-card class="container darker container-right">
+                    <div class="container-text">
+                        <p style="text-align: right"> <b>{{ getSender(msg.senderID) }}</b> </p>
+                        <p class="content-right">{{ msg.content }}</p> <br>
+                        <span class="time-left">{{ msg.createdAt | date:'dd/MM/yyyy h:mm a' }}</span>
+                    </div>
+                    <div class="container-photo">
+                        <img src="../../../../assets/doctor.png" alt="Avatar" class="right" style="width:100%">
+                    </div>
+                </mat-card>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="form">
+        <input class="input" [(ngModel)]="newMsg" maxlength="120" (keydown.enter)="submit(data.chatID)">
+        <button mat-raised-button color="accent" class="sendButton" (click)="submit(data.chatID)" [disabled]="!newMsg">Send</button>
+    </div> -->
+    <div *ngIf="finalDiagnosis == '' " class="container-message">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Send a message</mat-label>
+            <input [(ngModel)]="newMsg" (keydown.enter)="submit(data.chatID)" matInput>
+        </mat-form-field>
+        <button mat-raised-button color="accent" class="sendButton" (click)="submit(data.chatID)" [disabled]="!newMsg">Send</button>
+    </div>
+
+    <div *ngIf="finalDiagnosis != '' ">
+        <p>This chat is closed.</p>
+    </div>
+</mat-dialog-content>

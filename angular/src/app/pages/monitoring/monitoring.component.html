@@ -1,0 +1,105 @@
+<div class="grid grid-cols-1">
+    <mat-card class="mat-elevation-z8 m-5 w-fit h-fit justify-self-center">
+        <mat-card-title class="title"> Monitoring Values</mat-card-title>
+        <mat-card-subtitle>Insert your results</mat-card-subtitle>
+        <mat-divider inset></mat-divider>
+        <div class="row">
+            <div class="p-3 py-5">
+                <div class="row mt-2">
+                    <form [formGroup]="viewControl">
+                        <mat-form-field appearance="legacy" style="padding:10px">
+                            <mat-label>Systolic Blood Pressure</mat-label>
+                            <input matInput [(ngModel)]="SystolicBP" min="50" max="150" formControlName="SystolicBP" type="number">
+                            <mat-error class="warn" *ngIf="viewControl.get('SystolicBP')?.errors?.['min']">Minimum Systolic BP is 50.</mat-error>
+                            <mat-error class="warn" *ngIf="viewControl.get('SystolicBP')?.errors?.['max']">Maximum Systolic BP is 200.</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="legacy" style="padding:10px">
+                            <mat-label>Diastolic Blood Pressure</mat-label>
+                            <input matInput [(ngModel)]="DiastolicBP" min="20" max="120" formControlName="DiastolicBP" type="number">
+                            <mat-error class="warn" *ngIf="viewControl.get('DiastolicBP')?.errors?.['min']">Minimum Diastolic BP is 20.</mat-error>
+                            <mat-error class="warn" *ngIf="viewControl.get('DiastolicBP')?.errors?.['max']">Maximum Diastolic BP is 120.</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="legacy" style="padding:10px">
+                            <mat-label>Temperature</mat-label>
+                            <input matInput [(ngModel)]="Temperature" min="33" max="45" formControlName="Temperature" type="number">
+                            <mat-error class="warn" *ngIf="viewControl.get('Temperature')?.errors?.['min']">Minimum Temperature is 33.</mat-error>
+                            <mat-error class="warn" *ngIf="viewControl.get('Temperature')?.errors?.['max']">Maximum Temperature is 45.</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="legacy" style="padding:10px">
+                            <mat-label>Random Blood Sugar Level</mat-label>
+                            <input matInput [(ngModel)]="RandomBloodSugarLevel" min="20" max="1000" formControlName="RandomBloodSugarLevel" type="number">
+                            <mat-error class="warn" *ngIf="viewControl.get('RandomBloodSugarLevel')?.errors?.['min']">Minimum Random Blood Sugar Level is 20.</mat-error>
+                            <mat-error class="warn" *ngIf="viewControl.get('RandomBloodSugarLevel')?.errors?.['max']">Maximum Random Blood Sugar Level is 1000.</mat-error>
+                        </mat-form-field>
+                        <div class="text-center">
+                            <button mat-raised-button color="primary" type="submit" (click)='saveResults()' [disabled]="!viewControl.valid">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </mat-card>
+    <div class="flex justify-center">
+        <mat-card class="mat-elevation-z8 mx-3 h-fit w-fit justify-self-end">
+            <b>Displayed Columns</b>
+            <br/>
+            <mat-divider></mat-divider>
+            <br/>
+            <mat-checkbox (change)="controlView($event.checked, 'SystolicBP')" [checked]="true">
+                <mat-label>Systolic Blood Pressure</mat-label>
+            </mat-checkbox>
+            <br/>
+
+            <mat-checkbox (change)="controlView($event.checked, 'DiastolicBP')" [checked]="true">
+                <mat-label>Diastolic Blood Pressure</mat-label>
+            </mat-checkbox>
+            <br/>
+
+            <mat-checkbox (change)="controlView($event.checked, 'Temperature')" [checked]="true">
+                <mat-label>Temperature</mat-label>
+            </mat-checkbox>
+            <br/>
+
+            <mat-checkbox (change)="controlView($event.checked, 'RandomBloodSugarLevel')" [checked]="true">
+                <mat-label>Random Blood Sugar Level</mat-label>
+            </mat-checkbox>
+
+        </mat-card>
+
+        <div class="mat-elevation-z8 w-fit">
+            <table class="table-auto" mat-table [dataSource]="dataSourceMonitor" matSort matSortActive="Date" matSortDirection="asc">
+
+                <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}} </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div *ngIf="column != 'Date' && column != 'Delete'; else misc">
+                            <p *ngIf="element[column] != 0"> {{element[column]}} </p>
+                            <p *ngIf="element[column] == 0 || element[column] == ''"> - </p>
+                        </div>
+                        <ng-template #misc>
+
+                            <mat-chip-list color="primary" *ngIf="column == 'Date';else deleteData">
+                                <mat-chip color="primary"> {{ element[column] | date:'dd/MM/yyyy h:mm a' }} </mat-chip>
+                            </mat-chip-list>
+                            <ng-template #deleteData>
+                                <button mat-icon-button (click)="removeRow(element, element.eventId)">
+                                <mat-icon>close</mat-icon>
+                             </button>
+                            </ng-template>
+                        </ng-template>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+
+            </table>
+            <div style="text-align: center; padding:10px" *ngIf="dataSourceMonitor.data.length == 0">
+                <p>You do not have past values.</p>
+            </div>
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 25]" aria-label="Select page of test results"></mat-paginator>
+        </div>
+    </div>
+</div>

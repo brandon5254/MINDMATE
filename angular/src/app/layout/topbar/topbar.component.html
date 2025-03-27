@@ -1,0 +1,108 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="http://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+<mat-toolbar color="primary">
+
+    <span class="title">Health Application</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="userType != 'doctor' && userType != 'admin'" mat-button aria-label="New Test Button" routerLink="../home" (click)='refresh("/home")'>
+      <mat-icon>assignment</mat-icon> New Test
+    </button>
+    <button *ngIf="userType == 'doctor'" mat-button aria-label="Review Tests Button" routerLink="../tests" (click)='refresh("/tests")'>
+        <span *ngIf="this.myapp.NotifCount>0"matBadge="{{this.myapp.NotifCount}}" matBadgePosition="after" matBadgeColor="warn"></span>
+        <mat-icon>rate_review</mat-icon> Review Tests
+    </button>
+    <button *ngIf="userType == 'patient'" mat-button aria-label="Test History Button" routerLink="../history" (click)='refresh("/history")'>
+        <span *ngIf="this.myapp.NotifCount>0"matBadge="{{this.myapp.NotifCount}}" matBadgePosition="after" matBadgeColor="warn"></span>
+        <mat-icon>history</mat-icon> Test History
+    </button>
+    <button *ngIf="userType == 'patient'" mat-button aria-label="Monitoring Button" routerLink="../monitoring" (click)='refresh("/monitoring")'>
+        <mat-icon>tv</mat-icon> Monitoring
+    </button>
+    <button *ngIf="userType == 'patient'" mat-button aria-label="Map Button" routerLink="../map" (click)='refresh("/map"); openSnackBar()'>
+        <mat-icon>map</mat-icon> Map
+    </button>
+    <div>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <div *ngIf="userType=='default'; then login; else logout"></div>
+            <ng-template #login>
+                <button (menuOpened)="menuOpened()" [matMenuTriggerFor]="menu" mat-button aria-label="Log In Button">
+              <mat-icon>input</mat-icon> Log In
+            </button>
+                <mat-menu #menu="matMenu">
+                    <form (keydown.tab)="$event.stopPropagation()" (keydown.shift.tab)="$event.stopPropagation()">
+                        <div (click)="$event.stopPropagation()" class="login-container">
+                            <div *ngIf="signMode=='signin'">
+                                <mat-form-field>
+                                    <mat-label>Email</mat-label>
+                                    <input matInput [(ngModel)]="signInEmail" (click)="$event.stopPropagation()" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" [ngModelOptions]="{standalone: true}" type="email" #emailInput="ngModel" required tabindex="1" [email]="true">
+                                    <mat-error>{{emailErrorMessage}}</mat-error>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Password</mat-label>
+                                    <input matInput [(ngModel)]="signInPassword" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" [ngModelOptions]="{standalone: true}" #passInput="ngModel" minlength="6" [type]="hidePassword ? 'password' : 'text'" required tabindex="2">
+                                    <mat-error>{{passwordErrorMessage}}</mat-error>
+                                    <div tabindex="-1" mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                                        <mat-icon>{{hidePassword ? 'visibility_off ' : 'visibility '}}</mat-icon>                        
+                                    </div>
+                                </mat-form-field>
+                                <button tabindex="3" mat-raised-button color="primary" (click)='loginUser() ' [disabled]="!signInEmail || !signInPassword || emailInput.errors || passInput.errors">Log In</button>
+                                <button tabindex="4" style="margin-top: 10px;" mat-button ngbDropdownItem (click)="changeSignMode()">Don't you have an account? Sign Up</button>
+                                <button tabindex="5" style="margin-top: 10px;" mat-button ngbDropdownItem (click)="forgotMode = true;signMode = '';">Reset Password</button>
+                            </div>
+                            <div *ngIf="signMode=='signup'">
+                                <mat-form-field>
+                                    <mat-label>Email</mat-label>
+                                    <input matInput [(ngModel)]="signUpEmail" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" [ngModelOptions]="{standalone: true}" type="email" #emailInput="ngModel" required [email]="true">
+                                    <mat-error>{{emailErrorMessage}}</mat-error>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Full Name</mat-label>
+                                    <input matInput [(ngModel)]="signUpFullname" [ngModelOptions]="{standalone: true}" required>
+                                    <mat-error>{{nameErrorMessage}}</mat-error>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Password</mat-label>
+                                    <input matInput [(ngModel)]="signUpPassword" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" [ngModelOptions]="{standalone: true}" #passInput="ngModel" minlength="6" [type]="hidePassword ? 'password' : 'text'" required>
+                                    <button tabindex="-1" mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                                        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+                                    <mat-error>{{passwordErrorMessage}}</mat-error>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input matInput [(ngModel)]="signUpConfirmPassword" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" [ngModelOptions]="{standalone: true}" minlength="6" [type]="hidePassword ? 'password' : 'text'" required>
+                                    <a tabindex="-1" mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                                        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </a>
+                                    <mat-hint *ngIf="!(signUpPassword==signUpConfirmPassword)">{{confirmPasswordErrorMessage}}</mat-hint>
+                                    <mat-error>{{passwordErrorMessage}}</mat-error>
+                                </mat-form-field>
+                                <button mat-raised-button color="primary" (click)='registerUser()' [disabled]="!signUpEmail || !signUpFullname || !signUpPassword || !signUpConfirmPassword || passInput.errors || emailInput.errors || !(signUpPassword==signUpConfirmPassword)">Sign Up</button>
+                                <button style="margin-top: 10px;" mat-button ngbDropdownItem (click)="changeSignMode()">Already have an account? Log In</button>
+                            </div>
+                            <div *ngIf="forgotMode==true">
+                                <mat-form-field>
+                                    <mat-label>Email</mat-label>
+                                    <input matInput [(ngModel)]="signInEmail" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" [ngModelOptions]="{standalone: true}" type="email" #emailInput="ngModel" required [email]="true">
+                                    <mat-error>{{emailErrorMessage}}</mat-error>
+                                </mat-form-field>
+                                <button style="margin-top: 10px;" mat-button ngbDropdownItem (click)="forgotMode = false;signMode = 'signin';">Back</button>
+                                <button mat-raised-button color="primary" (click)="forgotPassword();" [disabled]="!signInEmail || emailInput.errors">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </mat-menu>
+
+            </ng-template>
+            <ng-template #logout>
+                <button mat-button [matMenuTriggerFor]="menu"> <mat-icon>account_circle</mat-icon> {{ currentUser }}</button>
+                <mat-menu #menu="matMenu" xPosition="after">
+                    <button mat-menu-item *ngIf="userType != 'admin'" routerLink="../profile" (click)='refresh("/profile")'> <mat-icon>account_circle</mat-icon> Profile</button>
+                    <button mat-menu-item (click)="logoutUser()"><mat-icon>output</mat-icon>Log Out</button>
+                </mat-menu>
+            </ng-template>
+        </ul>
+    </div>
+</mat-toolbar>

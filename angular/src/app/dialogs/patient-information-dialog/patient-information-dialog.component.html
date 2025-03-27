@@ -1,0 +1,111 @@
+<mat-dialog-content>
+    <div class="grid grid-cols-3 gap-2">
+        <div class="profile rounded-xl border-2">
+            <h1 class="card-header text-center">Profile</h1>
+            <img class="img-account-profile rounded-circle p-2" [src]="getDownloadURL()">
+            <mat-divider></mat-divider>
+            <div class="p-6">
+                <div>{{ currentUser.email }}</div>
+            </div>
+        </div>
+        <div class="accountDetails col-span-2 rounded-xl border-2">
+            <h1 class="card-header text-center">Account Details</h1>
+            <div class="p-6">
+                <mat-grid-list cols="2" rowHeight="3:1">
+                    <mat-grid-tile>
+                        <div appearance="fill" class="w-full">
+                            <b>Full Name</b><br>
+                            <span>{{currentUser.fullname}}</span>
+                        </div>
+                    </mat-grid-tile> 
+                    <mat-grid-tile>
+                        <div appearance="fill" class="w-full">
+                            <b>Phone Number</b><br>
+                            <span>{{ (currentUser.phoneNumber) ? currentUser.phoneNumber : '-' }}</span> 
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div appearance="fill" class="w-full">
+                            <b>Gender</b><br>
+                            <span>{{ (currentUser.gender) ? currentUser.gender : '-' }}</span>
+                        </div>
+                    </mat-grid-tile> 
+                    <mat-grid-tile>
+                        <div appearance="fill" class="w-full">
+                            <b>Birth Year</b><br>
+                            <span>{{ (currentUser.birthday) ? currentUser.birthday : '-' }}</span>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div appearance="fill" class="w-full">
+                            <b>Height</b><br>
+                            <span>{{ (currentUser.height) ? currentUser.height : '-' }}</span>
+                        </div>
+                    </mat-grid-tile> 
+                    <mat-grid-tile>
+                        <div appearance="fill" class="w-full">
+                            <b>Weight</b><br>
+                            <span>{{ (currentUser.weight) ? currentUser.weight : '-'}}</span>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+        <div class="documents rounded-xl border-2">
+            <h1 class="card-header text-center">Documents</h1>
+            <div class="p-6" *ngIf="fileList.size > 0; else noDocuments">
+                <ul>
+                    <li *ngFor="let file of fileList | keyvalue">
+                        <a href="{{ file.value }}">• {{file.key}}</a>
+                    </li>
+                </ul>
+            </div>
+            <ng-template class="p-6" #noDocuments>
+                <div class="p-6">
+                    <p>No Documents.</p>
+                </div>
+            </ng-template>
+        </div>
+        <div class="medicalHistory col-span-2 rounded-xl border-2">
+            <h1 class="card-header text-center" >Medical History</h1>
+            <div class="p-6 col">
+                <div *ngIf="currentMedicalHistory">
+                    <div *ngIf="currentMedicalHistory.question1">
+                        <b>What are your medical and surgical histories? Please specify.</b><br>
+                        <span> {{ currentMedicalHistory.question1 }} </span><br><br>
+                    </div>
+                        
+                    <div *ngIf="currentMedicalHistory.question2">
+                        <b>Do you take prescription or non-prescription medications? If yes, please specify.</b><br>
+                        <span> {{ currentMedicalHistory.question2 }} </span><br><br>
+                    </div>
+                        
+                    <div *ngIf="currentMedicalHistory.question3">
+                        <b>Do you have any allergies? If yes, please specify.</b><br>
+                        <span> {{ currentMedicalHistory.question3 }} </span><br><br>
+                    </div>
+                        
+                    <div *ngIf="currentMedicalHistory.question4">
+                        <b>What is your smoking, alcohol, and illicit drug use history? Please specify.</b><br>
+                        <span> {{ currentMedicalHistory.question4 }} </span><br><br>
+                    </div>
+
+                    <div *ngIf="currentMedicalHistory.question5">
+                        <b>Is there any diagnosed disease in your family? If yes, please specify.</b><br>
+                        <span> {{ currentMedicalHistory.question5 }} </span>
+                    </div>
+                </div>
+                <div *ngIf="!currentMedicalHistory">
+                    <p>{{currentUser.fullname}} does not have a medical history.</p>
+                </div>
+                
+            </div>
+        </div>        
+    </div>
+    
+    
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

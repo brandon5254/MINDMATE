@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>
+
+    Change the Department
+</h2>
+
+
+<mat-dialog-content class="mat-typography">
+
+
+    <div class="container3">
+        <h3 class="title">Current Department: {{ data.department}}</h3>
+        <h3 class="title">New Department: </h3>       
+        <mat-form-field class="decision" appearance="fill">
+            <mat-label>Departments</mat-label>
+            <input type="text" placeholder="Type a Department Name" [(ngModel)]="selectedDepartment" aria-label="Symptom" matInput [formControl]="myControl" [matAutocomplete]="auto" #departmentInput tabindex="-1">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let option of filteredDepartments | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close tabindex="-1">Cancel</button>
+    <button mat-button mat-dialog-close [disabled]="!departments.includes(selectedDepartment)" (click)="assignDepartment();" tabindex="-1">Assign</button>
+</mat-dialog-actions>

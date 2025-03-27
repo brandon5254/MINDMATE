@@ -1,0 +1,28 @@
+.img-account-profile {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.card-header {
+    font-weight: 500;
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+    background-color: #d6eae8;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}

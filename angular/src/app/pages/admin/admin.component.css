@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px;
+    max-width:none!important;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* #region TABLE */
+
+::ng-deep .mat-tab-body-content{
+    overflow: hidden!important;
+    height: auto!important;
+}
+
+::ng-deep .mat-sort-header-container, .mat-header-cell{
+    text-align: center;
+    justify-content: center;
+}
+
+::ng-deep td, th{
+    padding: 16px!important;
+}
+
+/* #endregion */

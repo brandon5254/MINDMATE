@@ -1,0 +1,148 @@
+<div class="pt-20">
+    <mat-card class="firstCard">
+        <mat-grid-list class="pt-5" cols="3">
+            <mat-grid-tile>
+                <mat-card class="insideCard">
+                    <mat-icon color="warn" class="icon">gps_fixed</mat-icon><br>
+                    <mat-card-title class="title">
+                        PURPOSE
+                    </mat-card-title>
+                    <mat-card-content class="content">
+                        'Health Application' intends to accurately identify the diseases of patients by examining their symptoms, using a machine learning model.
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-card class="insideCard">
+                    <mat-icon color="warn" class="icon">view_module</mat-icon><br>
+                    <mat-card-title class="title">
+                        DATASET
+                    </mat-card-title>
+                    <mat-card-content class="content">
+                        The current dataset that was used in the machine learning model has 4920 data points while containing 132 symptoms and 41 diseases.
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-card class="insideCard">
+                    <mat-icon color="warn" class="icon">memory</mat-icon><br>
+                    <mat-card-title class="title">
+                        MODEL
+                    </mat-card-title>
+                    <mat-card-content class="content">
+                        The model was constructed by using 'Random Forest Classifier'. The accuracy of the machine learning model is 98.69% while the training size of the dataset is 55%.
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <p class="start">LET'S GET STARTED
+                    <br><br>
+
+                    <button (click)="scroll(target)" mat-fab color="warn">
+                        <mat-icon>arrow_downward</mat-icon>
+                    </button>
+
+                </p>
+            </mat-grid-tile>
+            <mat-grid-tile>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-card>
+</div>
+
+
+<div #target class="py-40 flex flex-col justify-center items-center">
+
+    <mat-stepper [linear]="true" #stepper id="toggle-linear">
+        <mat-step [editable]="true">
+            <ng-template matStepLabel>Fill out the form</ng-template>
+            <div class="symptomsForm">
+
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Symptoms</mat-label>
+                        <input type="text" placeholder="Select Your Symptoms" aria-label="Symptom" matInput [formControl]="myControl" [matAutocomplete]="auto" #symptomInput>
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="selected($event)">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+
+
+                <h4><b>My Symptoms:</b></h4>
+                <mat-card class="symptom mb-5" *ngFor="let symptom of selectedSymptoms">
+                    {{symptom}}
+                    <button mat-icon-button aria-label="Remove Symptom" (click)="remove(symptom)">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-card>
+
+                <h5 *ngIf="selectedSymptoms.length == 0">Please Select Some Symptoms</h5>
+
+                <button mat-raised-button matStepperNext color="accent" (click)='getResult()' [disabled]="(testLimit == true) || (selectedSymptoms.length == 0)">Continue</button>
+                <br>
+                <mat-error *ngIf="testLimit">Max limit (3) for pending tests exceeded. </mat-error>
+            </div>
+
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Check Your Results</ng-template>
+            <ng-container *ngIf="showLoaderResult">
+                <div class="mt-5 flex justify-center">
+                    <mat-spinner></mat-spinner>
+                </div>
+            </ng-container>
+                <div class="flex justify-center mt-10" *ngIf="!showLoaderResult">
+                    <table class="diagnosisTable mat-elevation-z8" mat-table [dataSource]="possibleDiagnosis">
+                        <ng-container matColumnDef="name">
+                            <mat-header-cell mat-header-cell *matHeaderCellDef> Possible Diagnosis </mat-header-cell>
+                            <mat-cell class="flex justify-between items-center" mat-cell *matCellDef="let element"> <b>{{element.name}} </b> <p class="self-end">%{{ (element.probability * 100).toFixed(2)}}</p></mat-cell>
+                        </ng-container>
+    
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row class="clickable" matRipple *matRowDef="let row; columns: displayedColumns; let i = index" (click)="selectedDiagnosisIndex = i"></mat-row>
+                    </table>
+                    
+                    <div class="flex flex-col justify-center">
+                        <mat-card class="diagnosis-card mat-elevation-z8 " *ngIf="possibleDiagnosis.length != 0">
+                            <mat-card-subtitle *ngIf="selectedDiagnosisIndex == 0">Most Possible Diagnosis</mat-card-subtitle>
+                            <mat-card-subtitle *ngIf="selectedDiagnosisIndex != 0"> </mat-card-subtitle>
+                            <mat-card-title> {{ possibleDiagnosis[selectedDiagnosisIndex].name }}</mat-card-title>
+                            <mat-card-subtitle>%{{ (possibleDiagnosis[selectedDiagnosisIndex].probability* 100).toFixed(2) }}</mat-card-subtitle>
+                            <mat-card-content>
+                                {{ possibleDiagnosisInformation[selectedDiagnosisIndex].description }}
+                            </mat-card-content>
+                        </mat-card>
+                        
+                        <div class="flex justify-center">
+                            <button class="!m-1" mat-raised-button matStepperPrevious color="accent" *ngIf="showLoaderResult == false">New Test</button>
+                            <button class="!m-1" mat-raised-button (click)='recordTest()' color="accent" *ngIf="role == 'patient' && showLoaderResult == false">Send Test</button>
+                        </div>
+                    </div>
+                    <mat-card class="precautions-card mat-elevation-z8 ">
+                        <ng-container *ngIf="showLoaderResult">
+                            <div class="mt-5 flex justify-center">
+                                <mat-spinner></mat-spinner>
+                            </div>
+                        </ng-container>
+    
+                        <ng-container *ngIf="!showLoaderResult">
+                            <mat-card-title> Recommendation </mat-card-title>
+                            <mat-divider> </mat-divider>
+                            <ul>
+                                <ng-container *ngFor="let item of possibleDiagnosisInformation[selectedDiagnosisIndex].precautions; let i=index">
+                                    <br>
+                                    <li>• {{item}}</li>
+                                </ng-container>
+                            </ul>
+                        </ng-container>
+                    </mat-card>
+                </div>
+        </mat-step>
+    </mat-stepper>
+</div>

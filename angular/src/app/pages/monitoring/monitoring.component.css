@@ -1,0 +1,20 @@
+mat-form-field {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+}
+
+mat-chip {
+    height: 40px;
+}
+
+::ng-deep td{
+    padding: 12px!important;
+    
+}
+
+::ng-deep .mat-sort-header-container,
+.mat-header-cell {
+    text-align: center !important;
+    justify-content: center!important;
+}

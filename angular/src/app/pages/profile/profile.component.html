@@ -1,0 +1,151 @@
+
+
+<div class="flex justify-center">
+    <div class="grid grid-cols-3 gap-2 max-w-4xl">
+        <div class="profile rounded-xl border-2">
+            <h1 class="card-header text-center">Profile</h1>
+            <div *ngIf="!profilePictureLoading"  class="flex justify-center">
+                <img class="img-account-profile rounded-circle p-2" [src]="profileURL">
+            </div>
+            <div *ngIf="profilePictureLoading" class="flex justify-center m-6">
+                <mat-spinner diameter="100"></mat-spinner>
+            </div>
+            <div>
+                <div class="flex justify-center p-3">
+                    <button type="button" mat-icon-button color="warn" (click)="fileInput.click()">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <input hidden accept=".png, .jpg, .webp" (change)="changeProfilePicture($event)" #fileInput type="file" id="file">
+                    
+                    <button type="button" mat-icon-button color="warn" (click)="removeProfilePicture()" [disabled]="profilePicture == 'ProfileImages/default.jpg'">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+               
+                </div>
+                <mat-divider></mat-divider>
+                <div class="p-6">
+                    <b>{{ currentUserName }}</b>
+                    <div>{{ currentUserMail }}</div>
+                    <br>
+                    <div *ngIf="userRole == 'doctor'">Department: {{ inputDepartment }}</div>
+                </div>
+                <mat-divider *ngIf="userRole == 'doctor'"></mat-divider>
+    
+                <div class="p-6" *ngIf="userRole == 'doctor'">
+                    <div class="rating">
+                        <div>
+                            <ngx-material-rating [(ngModel)]="this.rate" [max]="5" [disabled]="true">
+                            </ngx-material-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accountDetails col-span-2 rounded-xl border-2">
+            <h1 class="card-header title text-center">Account Details</h1>
+            <div class="p-6">
+                <form class="example-form">
+                    <div class="grid grid-cols-2 gap-2">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput [(ngModel)]="name" name="name">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Phone Number</mat-label>
+                            <span matPrefix>+90 &nbsp;</span>
+                            <input matInput type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" maxlength="10">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="example-full-width">
+                            <mat-label>Gender</mat-label>
+                            <mat-select [(ngModel)]="gender" name="gender">
+                                <mat-option value="Female">Female</mat-option>
+                                <mat-option value="Male">Male</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Birth Year</mat-label>
+                            <mat-select [(ngModel)]="birthday" name="birthday">
+                                <mat-option *ngFor="let option of years" [value]="option.toString()">{{option}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field *ngIf="userRole == 'patient'" appearance="fill" class="example-full-width">
+                            <mat-label>Height</mat-label>
+                            <input matInput type="number" min="100" max="220" [(ngModel)]="height" [formControl]="heightControl">
+                            <mat-error class="warn" *ngIf="heightControl.errors?.['min']">Minimum height is 100.</mat-error>
+                            <mat-error class="warn" *ngIf="heightControl.errors?.['max']">Maximum height is 220.</mat-error>
+                        </mat-form-field>
+                        <mat-form-field *ngIf="userRole == 'patient'" class="example-full-width" appearance="fill">
+                            <mat-label>Weight</mat-label>
+                            <input matInput type="number" min="40" max="300" [(ngModel)]="weight" [formControl]="weightControl">
+                            <mat-error class="warn" *ngIf="weightControl.errors?.['min']">Minimum height is 40.</mat-error>
+                            <mat-error class="warn" *ngIf="weightControl.errors?.['max']">Maximum height is 300.</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <button mat-raised-button color="accent" (click)="saveAccountDetails(name, gender, birthday, phoneNumber, height, weight)" [disabled]="weightControl.errors || heightControl.errors">Save Changes</button>
+
+                </form>
+            </div>
+        </div>
+    
+        <div *ngIf="userRole == 'patient'" class="documents rounded-xl border-2">
+            <h1 class="card-header title text-center">Documents</h1>
+            <div class="p-6">
+                <div class="flex justify-center">
+                    <button mat-raised-button color="accent" (click)="fileInput.click()">Upload New File</button>
+                    <input hidden (change)="uploadFile($event)" #fileInput type="file" id="file">
+                </div>
+                <div *ngIf="fileLoading" class="flex justify-center m-6">
+                    <mat-spinner diameter="100"></mat-spinner>
+                </div>
+            </div>
+            <div class="p-6">
+                <ul>
+                    <li *ngFor="let file of fileList | keyvalue">
+                        <a href="{{ file.value }}">• {{file.key}}</a>
+                        <button type="button" (click)="deleteFile(file.key);" mat-icon-button color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div *ngIf="userRole == 'patient'" class="medicalHistory col-span-2 rounded-xl border-2">
+            <h1 class="card-header title text-center">Medical History</h1>
+            <div class="p-6">
+                <form class="example-form">
+
+                    <p>What are your medical and surgical histories? Please specify.</p>
+                    <mat-form-field class="w-full" appearance="fill">
+                        <textarea name="question1" [(ngModel)]="question1" matInput></textarea>
+                    </mat-form-field>
+
+                    <p>Do you take prescription or non-prescription medications? If yes, please specify.</p>
+                    <mat-form-field class="w-full" appearance="fill">
+                        <textarea name="question2" [(ngModel)]="question2" matInput></textarea>
+                    </mat-form-field>
+
+                    <p>Do you have any allergies? If yes, please specify.</p>
+                    <mat-form-field class="w-full" appearance="fill">
+                        <textarea name="question3" [(ngModel)]="question3" matInput></textarea>
+                    </mat-form-field>
+
+                    <p>What is your smoking, alcohol, and illicit drug use history? Please specify.</p>
+                    <mat-form-field class="w-full" appearance="fill">
+                        <textarea name="question4" [(ngModel)]="question4" matInput></textarea>
+                    </mat-form-field>
+
+                    <p>Is there any diagnosed disease in your family? If yes, please specify.</p>
+                    <mat-form-field class="w-full" appearance="fill">
+                        <textarea name="question5" [(ngModel)]="question5" matInput></textarea>
+                    </mat-form-field>
+                    <br/>
+                    <button mat-raised-button color="accent" (click)="saveMedicalHistory(question1, question2, question3, question4, question5)">Save Changes</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
