@@ -22,7 +22,10 @@ export class MapComponent implements OnInit {
 
 initMap(): void {
   let loader =new Loader({
-    apiKey: 'AIzaSyAFRms9o-1WMDcaOXa58C7AYpfbsuoJ8pM&libraries=places'
+    apiKey: 'AIzaSyDzy-ounKZhBSSQ_KShXviJeBjL5Lc8_jg', // Reemplaza con tu clave
+    version: 'weekly',
+    libraries: ['places']
+    
   })
 
   loader.load().then(() => {

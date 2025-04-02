@@ -1,0 +1,101 @@
+síntomas_positivos,síntomas_positivos_tipo,alucinaciones_frecuencia,alucinaciones_tipo,ideas_delirantes_frecuencia,ideas_delirantes_tipo,control_pensamiento,obsesiones_presencia,síntomas_negativos,síntomas_negativos_tipo,Aplanamiento_o_embotamiento_afectivo,Aplanamiento_o_embotamiento_afectivo_tipo,expresion_facial_reducida,gesticulacion_reducida,contacto_visual_bajo,afectividad_inapropiada,alogia,alogia_tipo,alogia_pobreza_habla,alogia_pobreza_contenido,alogia_bloqueos_pensamiento,abulia,abulia_tipo,abulia_higiene,abulia_trabajo_estudio,anergia_fisica,anhedonia,anhedonia_tipo,anhedonia_sociabilidad,anhedonia_intereses_recreativos,anhedonia_intereses_sexuales,anhedonia_relaciones_amigos,anhedonia_relaciones_familia,síntomas_cognitivos,síntomas_cognitivos_tipo,memoria_deterioro,atencion_deterioro,procesamiento_info_deficit,Sintomas_de_depresion,Sintomas_de_depresion_tipo,tristeza,sentimiento_de_culpa,cambios_en_el_apetito,sueño_o_fatiga,disminucion_del_libido,dificultad_de_concetracion,ideas_suicidas,sintomas_de_ansiedad,Sintomas_de_ansiedad_tipo,preocupacion,nerviosismo,pensamientos_intrusivos,taquicardia,sudoracion,temblores,disnea,hipervigilancia,Irritabilidad,disease
+No,10,6,5,2,4,No,Sí,No,3,No,8,No,No,No,Sí,No,0,Sí,No,Sí,No,6,No,No,No,No,0,Sí,No,Sí,No,No,Sí,2,3,9,No,Sí,8,No,Sí,Sí,No,Sí,Sí,Sí,No,1,Sí,No,Sí,Sí,No,No,No,Sí,No,Esquizofrenia residual
+Sí,7,3,9,2,10,Sí,No,No,10,No,6,No,Sí,No,No,Sí,6,Sí,No,No,Sí,3,Sí,Sí,No,Sí,3,Sí,Sí,No,Sí,Sí,Sí,1,1,3,No,No,9,Sí,No,Sí,Sí,Sí,Sí,No,Sí,6,Sí,Sí,No,No,Sí,Sí,Sí,No,No,Esquizofrenia catatónica
+Sí,10,3,7,10,7,Sí,Sí,No,2,No,7,No,No,No,No,Sí,8,Sí,No,No,Sí,7,Sí,No,No,No,2,Sí,No,No,No,Sí,Sí,7,6,4,No,Sí,9,Sí,No,No,Sí,No,No,Sí,No,2,Sí,No,No,Sí,No,Sí,Sí,No,No,Esquizofrenia desorganizada (hebefrénica)
+Sí,5,10,9,0,3,No,Sí,Sí,2,Sí,6,Sí,No,No,No,Sí,5,No,Sí,Sí,Sí,5,No,No,No,No,2,No,No,No,Sí,No,No,6,10,8,No,Sí,4,Sí,Sí,No,No,No,Sí,No,No,2,No,Sí,No,Sí,No,No,No,No,No,Esquizofrenia desorganizada (hebefrénica)
+Sí,1,2,9,7,2,Sí,No,No,5,Sí,2,Sí,No,Sí,Sí,No,4,No,No,No,Sí,9,Sí,No,No,Sí,2,Sí,Sí,Sí,No,Sí,Sí,8,7,7,Sí,No,6,Sí,Sí,Sí,No,No,Sí,Sí,Sí,1,No,Sí,No,Sí,Sí,No,Sí,Sí,No,Esquizofrenia paranoide
+No,9,9,7,3,0,No,Sí,No,1,No,7,No,No,Sí,Sí,No,3,Sí,No,Sí,Sí,5,Sí,Sí,Sí,Sí,5,No,Sí,Sí,Sí,Sí,No,0,8,0,No,No,3,No,Sí,Sí,Sí,Sí,Sí,Sí,Sí,0,No,Sí,No,Sí,Sí,No,No,Sí,Sí,Esquizofrenia catatónica
+Sí,2,0,2,4,9,No,Sí,No,10,No,2,Sí,No,No,No,Sí,1,No,Sí,Sí,Sí,8,Sí,Sí,No,No,9,No,No,Sí,Sí,Sí,Sí,4,0,7,No,Sí,9,No,No,No,No,No,No,No,Sí,10,Sí,No,Sí,No,No,Sí,Sí,Sí,Sí,Esquizofrenia catatónica
+No,8,1,1,8,4,Sí,Sí,Sí,3,No,5,Sí,Sí,Sí,No,Sí,3,Sí,Sí,No,No,3,Sí,Sí,No,Sí,3,Sí,Sí,No,No,Sí,No,1,4,8,No,No,8,No,No,No,No,Sí,No,Sí,No,6,Sí,Sí,No,Sí,Sí,Sí,Sí,No,No,Esquizofrenia paranoide
+No,4,1,7,3,4,Sí,Sí,Sí,10,Sí,4,Sí,Sí,No,Sí,Sí,8,Sí,Sí,No,No,3,No,No,Sí,No,5,Sí,No,No,Sí,No,No,6,5,6,No,No,5,Sí,Sí,Sí,Sí,No,Sí,No,Sí,3,No,No,No,No,No,Sí,No,Sí,No,Esquizofrenia desorganizada (hebefrénica)
+No,6,8,2,2,1,Sí,Sí,No,9,No,5,Sí,Sí,No,No,No,10,No,No,No,No,9,No,Sí,Sí,No,10,No,No,No,No,No,No,2,10,2,No,Sí,7,Sí,Sí,No,Sí,No,No,Sí,No,4,No,Sí,Sí,No,Sí,No,No,Sí,No,Esquizofrenia indiferenciada
+Sí,5,2,6,1,6,No,No,No,8,Sí,4,Sí,Sí,No,No,Sí,8,No,Sí,No,No,6,Sí,No,Sí,Sí,1,Sí,No,No,Sí,Sí,No,0,8,8,Sí,Sí,6,Sí,Sí,No,Sí,No,No,No,No,5,No,No,No,No,No,Sí,No,Sí,No,Esquizofrenia desorganizada (hebefrénica)
+No,4,4,7,0,6,Sí,No,Sí,6,Sí,7,Sí,No,No,Sí,Sí,1,No,No,Sí,No,5,Sí,Sí,No,Sí,8,Sí,Sí,No,Sí,Sí,No,10,9,5,Sí,No,3,No,No,No,Sí,Sí,No,No,Sí,1,Sí,No,Sí,Sí,Sí,Sí,No,Sí,Sí,Esquizofrenia indiferenciada
+Sí,6,9,2,1,6,Sí,Sí,No,5,Sí,6,No,No,Sí,Sí,No,0,Sí,Sí,No,Sí,2,Sí,Sí,Sí,No,3,Sí,No,No,Sí,Sí,Sí,4,7,1,No,Sí,6,Sí,No,No,Sí,No,Sí,No,No,2,No,No,No,Sí,No,No,No,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+No,7,9,1,7,5,Sí,Sí,No,3,Sí,5,No,Sí,No,No,No,9,Sí,Sí,No,Sí,8,Sí,Sí,No,No,3,No,Sí,Sí,Sí,No,No,4,0,7,No,Sí,9,No,No,No,No,Sí,Sí,No,No,7,Sí,No,Sí,Sí,No,Sí,No,No,No,Esquizofrenia paranoide
+No,9,5,4,7,2,No,Sí,No,3,Sí,9,No,No,No,Sí,Sí,9,Sí,Sí,Sí,No,1,Sí,No,Sí,Sí,1,No,Sí,Sí,No,No,No,7,9,8,No,Sí,0,No,No,No,No,No,No,Sí,No,7,No,No,No,No,Sí,No,Sí,Sí,No,Esquizofrenia residual
+Sí,9,0,1,0,10,No,Sí,Sí,0,Sí,4,Sí,No,No,No,Sí,2,No,Sí,Sí,No,6,Sí,Sí,No,No,9,Sí,Sí,No,Sí,No,No,5,2,5,Sí,No,7,Sí,Sí,Sí,No,No,No,Sí,Sí,5,No,Sí,No,No,No,Sí,Sí,No,No,Esquizofrenia paranoide
+Sí,1,3,9,10,3,No,No,No,3,No,0,Sí,Sí,Sí,No,No,7,No,No,Sí,No,8,No,Sí,Sí,No,6,Sí,Sí,No,No,No,Sí,1,0,4,Sí,No,6,Sí,Sí,No,No,Sí,Sí,Sí,No,9,Sí,No,Sí,No,Sí,No,No,No,No,Esquizofrenia paranoide
+Sí,1,5,1,1,8,No,Sí,No,4,Sí,2,Sí,No,Sí,No,No,3,Sí,No,Sí,No,1,Sí,Sí,No,No,5,No,Sí,Sí,No,No,Sí,2,10,2,Sí,No,6,Sí,Sí,No,No,No,No,No,Sí,9,No,Sí,No,No,Sí,Sí,No,No,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,8,8,8,8,6,No,Sí,Sí,5,Sí,8,No,Sí,No,Sí,Sí,3,Sí,Sí,Sí,No,4,Sí,Sí,No,No,0,No,No,No,No,No,Sí,7,1,2,Sí,No,2,Sí,No,Sí,No,No,No,No,Sí,4,Sí,No,Sí,No,Sí,Sí,No,No,No,Esquizofrenia paranoide
+Sí,7,0,7,8,0,Sí,Sí,No,8,No,10,No,Sí,No,Sí,No,6,No,Sí,No,No,7,Sí,Sí,No,Sí,8,Sí,No,Sí,No,Sí,No,8,3,10,No,No,6,No,No,Sí,No,No,Sí,No,Sí,0,No,No,No,Sí,Sí,Sí,No,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,10,1,5,0,0,Sí,Sí,Sí,9,No,0,Sí,Sí,No,No,No,4,Sí,No,No,Sí,6,Sí,Sí,Sí,No,0,No,No,Sí,Sí,Sí,Sí,6,0,2,Sí,Sí,10,Sí,No,No,Sí,Sí,Sí,Sí,Sí,2,Sí,Sí,Sí,No,Sí,Sí,Sí,No,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,0,6,9,4,10,Sí,Sí,Sí,1,No,10,Sí,No,No,Sí,No,7,No,No,Sí,Sí,9,No,Sí,Sí,No,3,Sí,Sí,Sí,No,Sí,Sí,10,9,10,Sí,No,8,No,Sí,Sí,Sí,Sí,Sí,No,Sí,8,No,Sí,Sí,Sí,Sí,Sí,No,Sí,No,Esquizofrenia catatónica
+No,2,7,10,10,7,Sí,No,No,8,Sí,9,No,Sí,Sí,Sí,No,3,No,No,No,Sí,0,No,No,Sí,No,8,No,Sí,Sí,Sí,Sí,Sí,2,2,6,No,Sí,10,Sí,Sí,Sí,No,Sí,No,Sí,Sí,0,No,No,Sí,Sí,Sí,No,No,Sí,No,Esquizofrenia paranoide
+No,5,0,6,4,4,Sí,Sí,Sí,0,No,7,Sí,Sí,No,No,Sí,10,No,Sí,Sí,No,8,Sí,No,No,Sí,10,Sí,No,No,No,Sí,No,3,1,5,Sí,No,5,Sí,No,Sí,Sí,Sí,Sí,Sí,Sí,9,No,Sí,No,No,Sí,No,Sí,Sí,Sí,Esquizofrenia paranoide
+No,10,9,2,7,6,Sí,No,Sí,10,Sí,8,No,Sí,No,Sí,No,9,No,No,No,No,0,Sí,Sí,Sí,No,9,Sí,Sí,Sí,Sí,Sí,No,4,4,5,Sí,Sí,5,Sí,Sí,Sí,No,No,Sí,No,Sí,8,Sí,No,Sí,No,Sí,No,No,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,8,0,5,9,4,Sí,No,No,0,No,2,No,Sí,No,Sí,No,5,Sí,Sí,No,No,4,Sí,No,Sí,Sí,0,Sí,Sí,No,No,No,No,10,7,5,No,No,5,Sí,No,Sí,Sí,No,No,Sí,No,8,Sí,Sí,Sí,No,Sí,Sí,No,Sí,Sí,Esquizofrenia indiferenciada
+Sí,0,8,7,8,9,Sí,No,No,1,No,7,No,Sí,Sí,Sí,Sí,2,No,No,No,No,2,No,Sí,Sí,Sí,6,Sí,No,Sí,No,Sí,No,4,1,1,No,No,5,Sí,Sí,Sí,Sí,Sí,No,Sí,No,2,Sí,Sí,No,No,Sí,Sí,Sí,Sí,No,Esquizofrenia desorganizada (hebefrénica)
+No,7,4,4,8,3,Sí,Sí,No,9,No,1,Sí,No,Sí,No,No,8,No,No,Sí,No,1,Sí,Sí,Sí,Sí,6,No,Sí,No,Sí,Sí,Sí,1,10,6,Sí,Sí,5,No,No,No,Sí,Sí,Sí,No,Sí,3,Sí,Sí,Sí,No,Sí,No,Sí,No,No,Esquizofrenia residual
+No,2,6,2,7,8,No,Sí,Sí,4,No,7,Sí,No,Sí,Sí,No,1,Sí,Sí,Sí,No,6,Sí,No,No,Sí,9,No,Sí,Sí,No,Sí,Sí,5,2,10,Sí,No,6,Sí,Sí,Sí,Sí,Sí,Sí,No,Sí,6,No,No,Sí,No,Sí,Sí,Sí,Sí,No,Esquizofrenia paranoide
+No,8,10,1,9,7,No,Sí,Sí,6,No,10,No,Sí,No,Sí,No,10,No,Sí,No,Sí,7,No,No,No,Sí,9,Sí,No,No,No,No,Sí,1,8,8,Sí,No,1,No,Sí,Sí,Sí,Sí,Sí,No,Sí,5,No,No,No,Sí,No,No,No,No,No,Esquizofrenia catatónica
+Sí,5,8,4,6,4,Sí,Sí,Sí,0,Sí,2,No,No,No,No,Sí,2,Sí,No,Sí,Sí,0,Sí,No,No,Sí,4,No,No,Sí,No,No,No,5,5,4,No,No,0,No,Sí,Sí,No,No,No,Sí,No,7,Sí,Sí,No,Sí,Sí,Sí,Sí,Sí,Sí,Esquizofrenia catatónica
+No,2,2,1,2,3,Sí,Sí,Sí,10,No,5,Sí,Sí,No,No,Sí,9,No,No,No,No,6,Sí,No,No,No,0,No,No,No,Sí,Sí,Sí,7,10,0,No,Sí,1,No,No,No,No,Sí,No,No,Sí,2,No,Sí,No,No,Sí,No,No,Sí,No,Esquizofrenia indiferenciada
+No,9,4,5,7,7,No,Sí,No,9,No,9,No,No,Sí,Sí,Sí,1,Sí,No,No,No,8,No,No,Sí,Sí,6,Sí,Sí,No,Sí,No,Sí,2,5,0,No,No,6,No,No,Sí,No,No,Sí,No,Sí,7,Sí,No,Sí,Sí,No,Sí,No,No,No,Esquizofrenia indiferenciada
+Sí,6,1,9,4,10,No,No,Sí,4,Sí,0,No,Sí,No,Sí,Sí,4,Sí,No,No,Sí,4,Sí,No,No,No,7,No,No,No,Sí,No,Sí,1,9,2,No,Sí,10,No,Sí,No,No,No,No,Sí,No,1,Sí,Sí,No,No,Sí,Sí,Sí,Sí,No,Esquizofrenia catatónica
+Sí,4,2,10,9,9,Sí,Sí,No,6,Sí,2,No,No,No,No,Sí,1,Sí,Sí,Sí,No,7,Sí,Sí,Sí,No,9,No,Sí,No,No,No,No,0,1,1,No,No,0,No,Sí,No,No,No,Sí,No,Sí,10,No,Sí,Sí,Sí,Sí,No,No,Sí,Sí,Esquizofrenia residual
+Sí,5,7,5,8,6,Sí,Sí,Sí,3,Sí,2,No,No,Sí,Sí,Sí,10,Sí,No,Sí,No,1,Sí,Sí,Sí,Sí,9,No,No,Sí,No,Sí,Sí,1,4,1,No,No,1,Sí,No,No,Sí,No,No,No,Sí,6,No,Sí,Sí,No,No,No,Sí,Sí,No,Esquizofrenia catatónica
+Sí,10,0,9,4,5,No,No,Sí,4,No,6,No,No,No,No,No,7,Sí,Sí,No,No,5,Sí,Sí,No,Sí,5,Sí,Sí,Sí,Sí,Sí,Sí,4,9,3,No,Sí,1,No,Sí,No,No,Sí,Sí,Sí,Sí,1,Sí,Sí,Sí,No,Sí,No,Sí,Sí,Sí,Esquizofrenia residual
+No,1,2,4,9,10,No,No,Sí,9,No,9,No,No,Sí,No,No,7,Sí,Sí,No,No,6,No,Sí,No,Sí,6,Sí,No,Sí,Sí,No,Sí,6,3,7,Sí,Sí,2,No,Sí,Sí,No,No,No,No,Sí,7,No,No,Sí,Sí,Sí,No,Sí,No,No,Esquizofrenia indiferenciada
+No,0,0,4,7,0,Sí,No,Sí,10,No,10,No,Sí,Sí,Sí,No,1,No,Sí,No,Sí,0,Sí,No,No,No,4,No,No,Sí,No,Sí,No,9,2,1,Sí,No,3,No,No,No,Sí,No,Sí,No,Sí,9,Sí,Sí,Sí,No,No,Sí,Sí,No,No,Esquizofrenia catatónica
+Sí,7,3,9,6,6,Sí,No,No,8,No,6,No,No,Sí,Sí,Sí,3,No,No,Sí,Sí,0,No,Sí,Sí,Sí,10,Sí,Sí,No,Sí,No,Sí,8,6,10,No,No,0,Sí,Sí,Sí,Sí,No,No,No,No,10,No,No,No,Sí,Sí,Sí,Sí,Sí,No,Esquizofrenia residual
+Sí,3,0,10,8,3,No,No,No,10,Sí,3,Sí,No,No,No,No,3,No,Sí,Sí,Sí,10,No,No,Sí,No,3,No,Sí,Sí,No,No,No,10,4,4,No,Sí,9,Sí,No,No,Sí,No,Sí,No,Sí,8,No,No,Sí,Sí,Sí,Sí,No,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,9,4,8,1,10,No,No,Sí,5,Sí,1,Sí,Sí,Sí,No,Sí,3,Sí,Sí,Sí,Sí,5,No,No,No,No,10,No,No,Sí,Sí,No,No,4,6,9,Sí,Sí,4,Sí,No,No,No,No,No,Sí,Sí,1,No,No,Sí,No,Sí,Sí,Sí,Sí,No,Esquizofrenia desorganizada (hebefrénica)
+Sí,5,7,8,7,1,Sí,Sí,Sí,1,Sí,10,Sí,No,No,No,No,9,No,Sí,No,Sí,4,No,Sí,No,No,2,No,No,No,No,No,Sí,6,2,8,Sí,Sí,3,No,No,No,No,Sí,No,Sí,Sí,10,Sí,Sí,Sí,Sí,No,No,No,Sí,Sí,Esquizofrenia residual
+No,3,10,6,7,9,No,Sí,No,3,No,1,Sí,No,No,No,Sí,10,Sí,No,Sí,No,9,Sí,Sí,Sí,No,9,No,Sí,No,Sí,Sí,No,4,9,1,Sí,Sí,2,No,Sí,Sí,Sí,No,No,No,No,9,Sí,No,No,No,No,No,Sí,Sí,Sí,Esquizofrenia residual
+Sí,8,4,10,8,1,Sí,Sí,Sí,10,Sí,10,Sí,Sí,Sí,Sí,No,9,Sí,Sí,No,Sí,10,Sí,Sí,No,No,3,No,Sí,No,Sí,Sí,No,8,8,7,Sí,No,10,Sí,Sí,Sí,No,Sí,No,No,No,1,Sí,Sí,No,Sí,No,No,Sí,Sí,No,Esquizofrenia desorganizada (hebefrénica)
+No,0,3,7,8,3,No,Sí,No,1,No,4,No,Sí,Sí,Sí,Sí,5,Sí,Sí,Sí,Sí,6,Sí,No,Sí,Sí,7,Sí,Sí,No,Sí,No,No,8,4,1,No,No,5,No,Sí,Sí,No,No,Sí,No,No,2,Sí,No,Sí,Sí,No,Sí,No,No,No,Esquizofrenia indiferenciada
+Sí,2,6,1,7,3,Sí,Sí,Sí,3,Sí,3,Sí,Sí,No,Sí,Sí,3,No,No,No,Sí,6,No,Sí,No,Sí,5,Sí,Sí,Sí,No,Sí,No,2,2,4,No,No,9,Sí,No,Sí,Sí,No,No,Sí,Sí,8,Sí,No,No,No,No,No,No,No,No,Esquizofrenia catatónica
+Sí,8,1,6,9,3,Sí,No,No,3,Sí,9,No,Sí,Sí,No,No,4,No,No,No,No,5,Sí,Sí,No,No,1,Sí,No,No,No,Sí,Sí,10,5,3,No,Sí,2,Sí,Sí,No,No,No,No,Sí,Sí,0,No,Sí,No,No,Sí,Sí,No,Sí,Sí,Esquizofrenia catatónica
+Sí,4,5,4,3,8,Sí,No,No,1,No,10,Sí,No,No,No,No,10,Sí,No,No,Sí,5,Sí,Sí,No,Sí,5,No,No,No,No,Sí,No,4,3,1,Sí,Sí,7,Sí,No,No,Sí,No,No,No,Sí,6,Sí,No,No,Sí,Sí,No,Sí,Sí,No,Esquizofrenia indiferenciada
+Sí,10,0,1,2,5,Sí,No,Sí,4,No,4,No,No,No,Sí,No,5,Sí,Sí,Sí,No,8,No,Sí,No,No,8,Sí,Sí,No,No,No,Sí,7,3,6,Sí,Sí,1,No,No,Sí,No,Sí,Sí,Sí,Sí,0,No,Sí,Sí,Sí,No,Sí,Sí,Sí,Sí,Esquizofrenia paranoide
+No,7,10,3,10,4,No,Sí,Sí,0,Sí,0,Sí,No,Sí,Sí,Sí,4,No,No,No,No,9,Sí,No,No,Sí,4,No,No,Sí,Sí,No,No,10,2,9,Sí,No,5,No,Sí,No,Sí,Sí,No,Sí,No,3,No,No,No,No,Sí,Sí,Sí,Sí,No,Esquizofrenia indiferenciada
+No,3,1,1,3,4,No,Sí,Sí,10,Sí,0,No,Sí,No,No,No,2,No,No,Sí,Sí,4,No,Sí,No,No,9,No,Sí,No,Sí,No,No,8,6,5,Sí,Sí,4,No,No,No,Sí,No,No,Sí,No,9,Sí,No,Sí,No,No,No,No,No,Sí,Esquizofrenia residual
+Sí,7,8,0,8,6,Sí,No,Sí,6,Sí,1,Sí,No,No,No,No,4,No,Sí,Sí,No,0,No,Sí,Sí,No,5,No,Sí,No,No,Sí,No,2,7,10,No,Sí,9,No,Sí,No,No,Sí,No,Sí,Sí,0,No,No,No,Sí,No,No,No,No,Sí,Esquizofrenia desorganizada (hebefrénica)
+No,9,3,9,2,10,Sí,No,Sí,1,Sí,7,No,No,Sí,Sí,Sí,1,No,No,Sí,Sí,7,Sí,Sí,Sí,Sí,8,Sí,Sí,No,No,No,No,2,2,3,No,No,6,Sí,Sí,Sí,No,Sí,No,No,Sí,6,Sí,No,Sí,No,Sí,No,No,Sí,Sí,Esquizofrenia catatónica
+Sí,7,8,3,2,9,No,Sí,No,0,Sí,4,Sí,No,No,Sí,Sí,5,Sí,No,Sí,Sí,9,No,Sí,No,No,6,Sí,Sí,Sí,Sí,No,No,9,2,1,No,Sí,0,Sí,Sí,No,No,No,No,No,No,7,Sí,No,Sí,No,No,No,Sí,No,No,Esquizofrenia residual
+No,7,5,10,4,6,Sí,No,No,0,No,7,No,Sí,No,No,No,8,No,No,No,No,2,Sí,No,No,Sí,4,Sí,Sí,No,Sí,No,Sí,7,5,9,No,Sí,0,No,Sí,Sí,No,Sí,Sí,No,Sí,1,No,No,No,Sí,No,No,Sí,Sí,No,Esquizofrenia catatónica
+Sí,2,6,8,2,4,No,Sí,Sí,2,Sí,9,Sí,Sí,Sí,Sí,Sí,10,No,No,No,No,5,No,No,No,No,2,Sí,No,Sí,Sí,Sí,Sí,2,7,6,No,No,10,Sí,No,Sí,No,No,Sí,Sí,Sí,3,No,No,No,Sí,Sí,Sí,No,No,No,Esquizofrenia desorganizada (hebefrénica)
+Sí,8,8,2,1,10,No,Sí,Sí,2,Sí,1,Sí,Sí,Sí,No,No,4,Sí,No,No,No,3,No,Sí,No,No,1,No,No,Sí,No,Sí,No,9,2,10,Sí,No,10,No,No,Sí,Sí,No,No,No,No,7,Sí,No,No,Sí,Sí,Sí,No,Sí,No,Esquizofrenia catatónica
+Sí,8,4,10,5,7,Sí,No,Sí,9,No,0,Sí,Sí,Sí,Sí,Sí,2,Sí,Sí,Sí,No,1,No,No,Sí,Sí,8,No,No,No,No,Sí,No,6,0,6,No,No,4,Sí,Sí,No,Sí,Sí,No,No,Sí,0,No,No,Sí,No,Sí,Sí,Sí,No,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,1,2,9,4,7,Sí,No,Sí,4,No,8,No,Sí,No,Sí,Sí,7,Sí,Sí,Sí,No,4,Sí,No,No,Sí,4,Sí,No,Sí,No,Sí,No,5,6,2,No,Sí,9,No,Sí,Sí,No,Sí,No,Sí,Sí,10,Sí,Sí,Sí,Sí,Sí,No,No,Sí,No,Esquizofrenia residual
+No,2,4,4,8,8,Sí,Sí,Sí,1,No,7,No,Sí,No,Sí,No,2,Sí,Sí,Sí,No,6,No,No,No,Sí,8,No,Sí,Sí,No,Sí,No,5,8,0,No,No,9,Sí,No,No,Sí,Sí,Sí,No,Sí,4,Sí,Sí,No,No,Sí,No,No,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+No,10,10,8,6,4,Sí,No,Sí,4,Sí,7,No,No,No,No,Sí,10,Sí,No,Sí,Sí,4,No,Sí,Sí,Sí,0,Sí,No,Sí,Sí,Sí,No,9,10,1,Sí,Sí,4,No,Sí,No,Sí,Sí,Sí,Sí,No,1,Sí,No,No,No,No,No,No,Sí,Sí,Esquizofrenia catatónica
+Sí,6,5,1,7,6,Sí,No,Sí,6,Sí,1,No,No,Sí,No,Sí,5,Sí,No,Sí,Sí,10,No,No,Sí,Sí,2,No,Sí,Sí,Sí,No,No,8,9,9,Sí,Sí,2,No,No,No,No,No,Sí,Sí,No,5,No,Sí,No,Sí,No,Sí,No,No,Sí,Esquizofrenia desorganizada (hebefrénica)
+No,0,2,9,3,7,Sí,Sí,No,9,Sí,1,Sí,Sí,Sí,No,Sí,4,Sí,No,Sí,No,10,No,No,No,Sí,0,No,Sí,Sí,Sí,No,Sí,4,6,5,Sí,Sí,6,Sí,Sí,Sí,Sí,No,No,Sí,Sí,6,Sí,No,No,No,No,Sí,No,Sí,Sí,Esquizofrenia residual
+No,3,10,4,5,8,No,Sí,No,2,No,10,Sí,No,Sí,Sí,Sí,9,Sí,Sí,Sí,No,9,No,No,Sí,No,10,Sí,No,Sí,No,No,Sí,7,4,4,No,Sí,4,Sí,No,Sí,No,Sí,Sí,No,No,7,No,Sí,No,Sí,Sí,No,Sí,Sí,No,Esquizofrenia catatónica
+No,7,0,7,4,2,No,Sí,Sí,10,No,5,Sí,Sí,No,Sí,No,0,No,No,Sí,Sí,3,No,No,Sí,No,5,No,Sí,Sí,Sí,Sí,No,8,8,8,Sí,No,8,No,Sí,No,No,Sí,No,Sí,Sí,7,Sí,Sí,No,Sí,Sí,Sí,Sí,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,0,9,6,2,9,No,No,No,6,No,4,No,Sí,Sí,Sí,No,2,Sí,No,Sí,No,3,Sí,Sí,Sí,No,1,Sí,Sí,No,No,Sí,No,6,2,10,No,Sí,6,Sí,No,No,No,Sí,Sí,No,Sí,9,No,No,Sí,Sí,No,No,Sí,Sí,Sí,Esquizofrenia residual
+No,9,9,10,5,6,Sí,No,Sí,2,No,2,Sí,No,Sí,No,No,0,No,Sí,Sí,Sí,9,No,No,Sí,No,6,Sí,Sí,Sí,No,No,Sí,5,9,6,No,Sí,6,No,Sí,No,No,Sí,No,Sí,No,10,No,Sí,Sí,No,No,Sí,No,Sí,No,Esquizofrenia residual
+Sí,6,9,7,2,0,No,Sí,No,3,No,3,No,Sí,Sí,Sí,No,9,No,Sí,Sí,No,8,Sí,Sí,No,Sí,1,Sí,Sí,Sí,Sí,Sí,Sí,10,1,0,No,No,3,Sí,Sí,No,No,No,No,No,Sí,0,No,No,No,No,Sí,No,No,No,Sí,Esquizofrenia residual
+Sí,10,7,4,2,2,Sí,No,Sí,8,No,4,No,Sí,No,No,Sí,4,Sí,No,No,No,8,Sí,Sí,No,Sí,4,No,Sí,No,No,No,No,0,1,6,Sí,No,9,No,No,Sí,Sí,Sí,Sí,Sí,No,7,Sí,Sí,No,Sí,Sí,No,Sí,Sí,Sí,Esquizofrenia desorganizada (hebefrénica)
+Sí,0,1,2,10,3,Sí,Sí,No,2,Sí,4,No,Sí,No,No,Sí,8,No,Sí,Sí,Sí,3,Sí,No,Sí,No,0,No,No,Sí,No,Sí,Sí,0,8,6,Sí,No,3,Sí,No,Sí,Sí,Sí,Sí,No,Sí,8,Sí,Sí,No,No,No,Sí,No,No,No,Esquizofrenia catatónica
+Sí,4,7,4,1,5,No,No,No,1,Sí,6,Sí,No,Sí,Sí,No,2,No,No,Sí,Sí,7,Sí,Sí,Sí,No,2,No,Sí,Sí,Sí,No,Sí,9,6,4,No,Sí,8,No,Sí,Sí,Sí,No,Sí,No,Sí,8,Sí,No,No,Sí,Sí,Sí,Sí,Sí,No,Esquizofrenia catatónica
+No,3,3,6,5,7,No,No,No,0,Sí,5,No,Sí,No,No,Sí,2,No,Sí,No,Sí,8,No,No,Sí,Sí,2,Sí,No,Sí,No,No,Sí,10,2,4,No,Sí,6,No,No,Sí,No,Sí,No,Sí,Sí,4,Sí,No,No,Sí,Sí,Sí,Sí,Sí,Sí,Esquizofrenia residual
+Sí,4,7,5,6,5,Sí,No,Sí,2,Sí,10,No,No,Sí,Sí,No,3,No,Sí,No,No,9,Sí,Sí,Sí,Sí,6,No,No,Sí,No,Sí,Sí,2,3,4,No,Sí,4,Sí,Sí,No,No,Sí,No,Sí,Sí,0,Sí,No,Sí,No,No,No,Sí,No,Sí,Esquizofrenia residual
+No,4,10,6,5,2,Sí,Sí,No,9,No,6,No,Sí,No,Sí,No,7,No,Sí,No,Sí,8,No,Sí,No,No,5,No,No,Sí,Sí,No,Sí,5,9,5,Sí,No,5,Sí,Sí,No,Sí,No,No,No,No,6,No,Sí,No,No,No,Sí,No,No,Sí,Esquizofrenia indiferenciada
+No,7,9,3,2,3,Sí,No,Sí,3,Sí,5,No,No,Sí,No,No,6,No,Sí,Sí,Sí,7,Sí,No,Sí,No,10,No,No,Sí,No,No,Sí,9,8,1,No,Sí,9,Sí,Sí,No,Sí,No,Sí,Sí,Sí,9,Sí,Sí,Sí,No,Sí,No,No,Sí,Sí,Esquizofrenia indiferenciada
+Sí,2,4,2,3,7,Sí,No,Sí,3,Sí,8,Sí,Sí,No,Sí,No,1,Sí,No,Sí,Sí,0,No,Sí,Sí,No,1,No,No,No,Sí,No,Sí,2,5,10,No,No,0,Sí,No,No,Sí,No,No,No,Sí,6,Sí,Sí,Sí,Sí,No,Sí,No,No,Sí,Esquizofrenia residual
+No,3,7,4,6,8,No,Sí,Sí,9,No,8,No,No,Sí,No,No,9,Sí,No,Sí,Sí,1,Sí,Sí,Sí,No,4,No,No,No,Sí,No,No,6,2,2,Sí,Sí,4,No,Sí,No,No,Sí,No,Sí,No,8,Sí,No,Sí,No,No,Sí,No,Sí,Sí,Esquizofrenia catatónica
+Sí,3,10,6,8,6,No,Sí,Sí,10,No,3,No,No,Sí,Sí,Sí,6,No,No,No,No,1,No,No,Sí,No,6,No,No,No,No,Sí,No,0,7,6,No,No,8,No,No,No,Sí,Sí,No,Sí,Sí,3,No,No,Sí,Sí,No,Sí,No,No,No,Esquizofrenia paranoide
+No,6,6,3,8,8,Sí,No,Sí,5,No,8,No,Sí,No,Sí,Sí,4,Sí,Sí,No,No,8,No,No,Sí,Sí,4,No,No,Sí,No,Sí,Sí,1,4,4,No,No,9,No,Sí,No,Sí,Sí,Sí,Sí,No,8,Sí,No,No,Sí,No,Sí,Sí,No,Sí,Esquizofrenia residual
+Sí,8,0,7,7,0,No,No,No,1,No,10,No,No,No,Sí,Sí,6,Sí,Sí,Sí,Sí,5,No,Sí,No,No,9,Sí,No,No,Sí,No,No,9,3,6,No,Sí,3,Sí,No,Sí,No,No,No,Sí,Sí,0,Sí,Sí,No,No,Sí,Sí,Sí,Sí,No,Esquizofrenia catatónica
+Sí,4,0,10,9,1,Sí,No,Sí,3,No,1,No,No,No,Sí,No,1,Sí,No,No,Sí,4,No,Sí,Sí,Sí,7,No,No,No,No,No,Sí,2,5,10,Sí,Sí,5,Sí,No,Sí,No,No,Sí,No,Sí,4,No,No,Sí,No,No,Sí,Sí,No,Sí,Esquizofrenia residual
+Sí,8,9,3,7,9,Sí,Sí,Sí,3,No,4,Sí,Sí,No,Sí,No,8,No,No,No,Sí,1,No,No,Sí,No,5,No,Sí,No,No,No,No,10,4,5,Sí,No,4,No,No,Sí,Sí,No,Sí,No,Sí,9,Sí,Sí,No,No,No,Sí,Sí,Sí,Sí,Esquizofrenia residual
+No,6,7,8,5,3,Sí,Sí,No,0,No,5,Sí,No,No,No,Sí,7,Sí,No,No,No,5,No,Sí,Sí,No,8,Sí,Sí,Sí,No,No,Sí,4,2,3,No,No,5,No,Sí,Sí,No,Sí,No,No,Sí,1,Sí,Sí,Sí,Sí,No,No,Sí,No,No,Esquizofrenia indiferenciada
+No,5,0,0,6,5,Sí,Sí,Sí,3,Sí,8,No,Sí,Sí,No,No,9,No,No,No,No,9,No,Sí,No,No,2,No,No,Sí,No,No,No,3,5,4,No,Sí,6,No,Sí,No,No,Sí,No,No,Sí,5,Sí,Sí,No,Sí,Sí,No,No,No,Sí,Esquizofrenia indiferenciada
+No,7,6,1,2,6,Sí,Sí,No,10,Sí,8,No,No,No,No,Sí,3,Sí,Sí,No,Sí,0,No,Sí,Sí,Sí,7,Sí,Sí,Sí,Sí,No,No,3,5,8,No,No,4,No,Sí,Sí,No,Sí,Sí,No,Sí,5,No,Sí,Sí,No,Sí,No,Sí,Sí,Sí,Esquizofrenia paranoide
+Sí,4,4,5,8,2,Sí,No,Sí,10,Sí,4,No,No,No,Sí,Sí,3,No,Sí,Sí,Sí,7,Sí,Sí,No,No,6,No,Sí,Sí,Sí,No,No,4,10,10,No,Sí,7,Sí,Sí,No,No,Sí,Sí,Sí,No,8,No,No,No,No,Sí,Sí,Sí,No,No,Esquizofrenia residual
+Sí,5,2,7,0,1,Sí,No,No,6,No,4,No,No,Sí,Sí,No,8,Sí,No,No,No,5,No,Sí,No,No,5,Sí,No,Sí,No,Sí,Sí,6,0,4,No,Sí,7,Sí,Sí,No,No,Sí,No,No,No,0,No,No,Sí,Sí,Sí,Sí,Sí,Sí,Sí,Esquizofrenia catatónica
+Sí,1,3,4,0,10,No,No,No,2,Sí,2,Sí,Sí,No,No,No,10,Sí,No,No,No,6,Sí,Sí,No,No,5,Sí,No,No,No,Sí,Sí,4,6,2,Sí,No,10,Sí,Sí,Sí,Sí,Sí,Sí,No,Sí,2,No,Sí,No,No,No,No,No,Sí,No,Esquizofrenia paranoide
+Sí,3,8,7,8,5,Sí,Sí,Sí,7,No,2,Sí,Sí,No,No,Sí,9,No,Sí,No,No,10,No,No,Sí,No,9,No,Sí,No,No,No,Sí,0,6,1,No,Sí,5,Sí,No,No,No,No,Sí,No,Sí,7,No,No,No,Sí,Sí,No,Sí,Sí,No,Esquizofrenia residual
+Sí,9,5,9,9,2,No,No,No,0,Sí,6,No,No,Sí,No,No,7,Sí,No,Sí,No,8,No,Sí,No,No,10,No,Sí,No,Sí,Sí,No,8,0,0,Sí,No,6,No,No,Sí,Sí,No,No,Sí,Sí,7,No,Sí,Sí,No,Sí,No,Sí,Sí,Sí,Esquizofrenia indiferenciada
+Sí,3,7,1,5,4,Sí,Sí,No,2,Sí,2,Sí,Sí,Sí,Sí,Sí,7,No,No,No,No,3,Sí,Sí,No,No,6,Sí,No,Sí,Sí,Sí,No,9,0,8,No,Sí,8,Sí,Sí,Sí,No,Sí,No,No,Sí,1,No,Sí,No,No,No,No,Sí,Sí,No,Esquizofrenia residual
+Sí,10,3,10,8,7,No,No,Sí,2,No,0,Sí,No,Sí,No,Sí,2,No,Sí,No,No,10,No,Sí,Sí,No,1,No,No,No,Sí,No,Sí,9,2,0,No,Sí,2,No,No,Sí,Sí,No,Sí,Sí,Sí,5,Sí,No,No,No,Sí,No,No,No,No,Esquizofrenia desorganizada (hebefrénica)
+Sí,4,1,0,5,8,Sí,No,No,6,Sí,0,No,Sí,Sí,Sí,No,2,Sí,Sí,Sí,Sí,3,Sí,No,Sí,Sí,9,No,Sí,Sí,Sí,No,Sí,9,2,6,Sí,No,2,No,No,No,No,No,No,Sí,Sí,1,Sí,Sí,No,Sí,Sí,No,Sí,Sí,No,Esquizofrenia desorganizada (hebefrénica)
+Sí,0,9,0,10,4,Sí,No,Sí,4,No,7,No,Sí,No,Sí,No,3,Sí,Sí,Sí,Sí,3,Sí,No,No,Sí,5,No,No,Sí,No,Sí,Sí,6,3,9,No,Sí,2,Sí,Sí,Sí,Sí,Sí,No,No,Sí,4,Sí,Sí,No,Sí,No,No,No,Sí,Sí,Esquizofrenia indiferenciada
+Sí,7,6,7,5,2,Sí,No,Sí,4,No,7,Sí,Sí,Sí,No,Sí,9,Sí,No,Sí,No,9,No,Sí,No,Sí,8,Sí,Sí,Sí,No,Sí,No,4,1,10,No,Sí,10,Sí,No,No,Sí,Sí,No,No,No,0,Sí,Sí,Sí,No,No,Sí,Sí,No,No,Esquizofrenia residual
+Sí,0,1,4,5,1,No,Sí,Sí,3,Sí,10,Sí,No,Sí,No,Sí,1,No,No,Sí,No,1,No,No,No,Sí,0,No,Sí,No,Sí,Sí,Sí,10,10,2,Sí,No,9,Sí,Sí,No,Sí,Sí,No,No,No,2,No,Sí,No,Sí,Sí,Sí,Sí,No,No,Esquizofrenia residual
+Sí,8,5,7,9,8,Sí,Sí,No,5,No,0,No,Sí,No,No,Sí,0,No,No,No,No,9,Sí,Sí,No,No,6,Sí,Sí,No,Sí,Sí,No,10,9,6,No,No,3,No,No,Sí,No,No,No,Sí,No,6,No,No,Sí,Sí,No,Sí,Sí,Sí,No,Esquizofrenia catatónica
+No,4,0,7,8,5,Sí,No,No,5,Sí,8,Sí,No,No,No,Sí,9,Sí,Sí,No,No,0,No,Sí,No,Sí,2,Sí,No,Sí,Sí,Sí,Sí,1,2,10,No,Sí,6,No,Sí,Sí,No,No,No,Sí,Sí,2,No,Sí,Sí,Sí,No,Sí,No,No,No,Esquizofrenia catatónica
+Sí,5,8,1,3,9,Sí,No,No,9,No,1,Sí,Sí,Sí,No,Sí,2,Sí,No,No,Sí,1,No,No,Sí,No,8,No,No,Sí,No,No,Sí,9,8,4,No,Sí,5,No,No,Sí,Sí,No,Sí,No,Sí,3,Sí,Sí,No,Sí,Sí,Sí,Sí,No,Sí,Esquizofrenia desorganizada (hebefrénica)
