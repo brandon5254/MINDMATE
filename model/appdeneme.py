@@ -22,7 +22,7 @@ def train():
     parameters = request.get_json()
 
     # Cargamos el dataset principal con enfermedades y síntomas
-    df = pd.read_csv('./model/datasett.csv')
+    df = pd.read_csv('./model/dataset5.csv')
 
     # Limpiamos los datos eliminando espacios en blanco
     cols = df.columns

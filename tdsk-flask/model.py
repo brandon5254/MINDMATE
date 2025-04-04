@@ -17,7 +17,7 @@ def getResult(symptoms):
     #     0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
     #     0.0, 0.0]]
 
-    model = joblib.load("../model/model.joblib")
+    model = joblib.load("../model/random_forest.joblib")
 
     results = model.predict_proba(symptoms)[0]
 
