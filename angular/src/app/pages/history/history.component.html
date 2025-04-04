@@ -1,9 +1,9 @@
 
 <div class="container">
-    <h1 class="title">TEST HISTORY</h1>
+    <h1 class="title">HISTORIAL DE PRUEBAS</h1>
 </div>
 <mat-tab-group mat-align-tabs="center" #tabs (selectedTabChange)="realignInkBar()">
-    <mat-tab label="Pending Tests">
+    <mat-tab label="Pruebas pendientes">
         <div class="container">
             <mat-form-field appearance="standard">
                 <mat-label><mat-icon>filter_list</mat-icon>Filter</mat-label>
@@ -71,7 +71,7 @@
     </mat-tab>
 
 
-    <mat-tab label="In Progress Tests">
+    <mat-tab label="Pruebas En Curso">
         <div class="container">
             <mat-form-field appearance="standard">
                 <mat-label><mat-icon>filter_list</mat-icon>Filter</mat-label>
@@ -153,7 +153,7 @@
         </div>
     </mat-tab>
 
-    <mat-tab label="Finalized Tests">
+    <mat-tab label="Pruebas Finalizadas">
         <div class="container">
             <mat-form-field appearance="standard">
                 <mat-label><mat-icon>filter_list</mat-icon>Filter</mat-label>
@@ -248,7 +248,7 @@
 
                 </table>
                 <div class="p-6" *ngIf="dataSourceFinalized.data.length == 0">
-                    <p>There are no finalized tests.</p>
+                    <p>No hay pruebas finalizadas. .</p>
                 </div>
                 <mat-paginator #paginatorFinalized [pageSizeOptions]="[ 5, 10, 25, 100]" aria-label="Select page of tests"></mat-paginator>
             </div>

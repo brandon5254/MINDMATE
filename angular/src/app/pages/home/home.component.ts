@@ -83,8 +83,8 @@ export class HomeComponent implements OnInit{
         this.testLimit = true;
       } 
     });
-    if (this.role == 'disabled'){
-      this.myapp.openSnackBar("This account is disabled.", "Continue", "mat-primary");
+    if (this.role == 'deshabilitada'){
+      this.myapp.openSnackBar("Esta cuenta está deshabilitada.", "Continuar", "mat-primary");
     }
   }
 
@@ -161,7 +161,7 @@ export class HomeComponent implements OnInit{
       let newTest = new Test(localStorage.getItem('id')!, "", "", Date.now(), this.selectedSymptoms.toString(), this.diagnosisListToString(this.possibleDiagnosis), "", dep)
       this._serviceTests.create(newTest);
     }
-    this.myapp.openSnackBar("Test has been created! Visit test history page.","Continue",'mat-primary')
+    this.myapp.openSnackBar("¡La prueba ha sido creada! Visita la página de historial de pruebas.","Continuar",'mat-primary')
   }
 
   diagnosisListToString(list: Diagnosis[]){

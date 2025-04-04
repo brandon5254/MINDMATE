@@ -5,7 +5,7 @@
                 <mat-card class="insideCard">
                     <mat-icon color="warn" class="icon">gps_fixed</mat-icon><br>
                     <mat-card-title class="title">
-                        PURPOSE
+                        OBJETIVO
                     </mat-card-title>
                     <mat-card-content class="content">
                         'Aplicación de Salud' pretende identificar con precisión las enfermedades de los pacientes mediante el examen de sus síntomas, utilizando un modelo de aprendizaje automático.                    </mat-card-content>
@@ -25,7 +25,7 @@
                 <mat-card class="insideCard">
                     <mat-icon color="warn" class="icon">memory</mat-icon><br>
                     <mat-card-title class="title">
-                        MODEL
+                        MODELO
                     </mat-card-title>
                     <mat-card-content class="content">
                         El modelo se construyó utilizando el clasificador de bosque aleatorio. La precisión del modelo de aprendizaje automático es del 98,69 %, mientras que el tamaño de entrenamiento del conjunto de datos es del 55 %.                    </mat-card-content>
@@ -34,7 +34,7 @@
             <mat-grid-tile>
             </mat-grid-tile>
             <mat-grid-tile>
-                <p class="start">LET'S GET STARTED
+                <p class="start">Comenzar
                     <br><br>
 
                     <button (click)="scroll(target)" mat-fab color="warn">
@@ -54,12 +54,12 @@
 
     <mat-stepper [linear]="true" #stepper id="toggle-linear">
         <mat-step [editable]="true">
-            <ng-template matStepLabel>Fill out the form</ng-template>
+            <ng-template matStepLabel>Rellene el formulario</ng-template>
             <div class="symptomsForm">
 
                 <form class="example-form">
                     <mat-form-field class="example-full-width" appearance="fill">
-                        <mat-label>Symptoms</mat-label>
+                        <mat-label>Sintomas</mat-label>
                         <input type="text" placeholder="Select Your Symptoms" aria-label="Symptom" matInput [formControl]="myControl" [matAutocomplete]="auto" #symptomInput>
                         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="selected($event)">
                             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -70,7 +70,7 @@
                 </form>
 
 
-                <h4><b>My Symptoms:</b></h4>
+                <h4><b>Mis Sintomas:</b></h4>
                 <mat-card class="symptom mb-5" *ngFor="let symptom of selectedSymptoms">
                     {{symptom}}
                     <button mat-icon-button aria-label="Remove Symptom" (click)="remove(symptom)">
@@ -78,17 +78,19 @@
                     </button>
                 </mat-card>
 
-                <h5 *ngIf="selectedSymptoms.length == 0">Please Select Some Symptoms</h5>
+                <h5 *ngIf="selectedSymptoms.length == 0">Por favor seleccione algunos síntomas
+                </h5>
 
-                <button mat-raised-button matStepperNext color="accent" (click)='getResult()' [disabled]="(testLimit == true) || (selectedSymptoms.length == 0)">Continue</button>
+                <button mat-raised-button matStepperNext color="accent" (click)='getResult()' [disabled]="(testLimit == true) || (selectedSymptoms.length == 0)">continuar</button>
                 <br>
-                <mat-error *ngIf="testLimit">Max limit (3) for pending tests exceeded. </mat-error>
+                <mat-error *ngIf="testLimit">Se superó el límite máximo (3) de pruebas pendientes.
+                    . </mat-error>
             </div>
 
         </mat-step>
 
         <mat-step>
-            <ng-template matStepLabel>Check Your Results</ng-template>
+            <ng-template matStepLabel>Comprueba tus resultados</ng-template>
             <ng-container *ngIf="showLoaderResult">
                 <div class="mt-5 flex justify-center">
                     <mat-spinner></mat-spinner>
@@ -117,7 +119,7 @@
                         </mat-card>
                         
                         <div class="flex justify-center">
-                            <button class="!m-1" mat-raised-button matStepperPrevious color="accent" *ngIf="showLoaderResult == false">New Test</button>
+                            <button class="!m-1" mat-raised-button matStepperPrevious color="accent" *ngIf="showLoaderResult == false">Nuevo Test</button>
                             <button class="!m-1" mat-raised-button (click)='recordTest()' color="accent" *ngIf="role == 'patient' && showLoaderResult == false">Send Test</button>
                         </div>
                     </div>

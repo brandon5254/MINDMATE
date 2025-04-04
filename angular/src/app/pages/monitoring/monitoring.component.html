@@ -1,38 +1,38 @@
 <div class="grid grid-cols-1">
     <mat-card class="mat-elevation-z8 m-5 w-fit h-fit justify-self-center">
-        <mat-card-title class="title"> Monitoring Values</mat-card-title>
-        <mat-card-subtitle>Insert your results</mat-card-subtitle>
+        <mat-card-title class="title"> Valores de monitoreo</mat-card-title>
+        <mat-card-subtitle>Inserta Tus Resultados</mat-card-subtitle>
         <mat-divider inset></mat-divider>
         <div class="row">
             <div class="p-3 py-5">
                 <div class="row mt-2">
                     <form [formGroup]="viewControl">
                         <mat-form-field appearance="legacy" style="padding:10px">
-                            <mat-label>Systolic Blood Pressure</mat-label>
+                            <mat-label>Presion Arterial Sistolica</mat-label>
                             <input matInput [(ngModel)]="SystolicBP" min="50" max="150" formControlName="SystolicBP" type="number">
                             <mat-error class="warn" *ngIf="viewControl.get('SystolicBP')?.errors?.['min']">Minimum Systolic BP is 50.</mat-error>
                             <mat-error class="warn" *ngIf="viewControl.get('SystolicBP')?.errors?.['max']">Maximum Systolic BP is 200.</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="legacy" style="padding:10px">
-                            <mat-label>Diastolic Blood Pressure</mat-label>
+                            <mat-label>Presión arterial diastólica</mat-label>
                             <input matInput [(ngModel)]="DiastolicBP" min="20" max="120" formControlName="DiastolicBP" type="number">
                             <mat-error class="warn" *ngIf="viewControl.get('DiastolicBP')?.errors?.['min']">Minimum Diastolic BP is 20.</mat-error>
                             <mat-error class="warn" *ngIf="viewControl.get('DiastolicBP')?.errors?.['max']">Maximum Diastolic BP is 120.</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="legacy" style="padding:10px">
-                            <mat-label>Temperature</mat-label>
+                            <mat-label>Temperatura</mat-label>
                             <input matInput [(ngModel)]="Temperature" min="33" max="45" formControlName="Temperature" type="number">
                             <mat-error class="warn" *ngIf="viewControl.get('Temperature')?.errors?.['min']">Minimum Temperature is 33.</mat-error>
                             <mat-error class="warn" *ngIf="viewControl.get('Temperature')?.errors?.['max']">Maximum Temperature is 45.</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="legacy" style="padding:10px">
-                            <mat-label>Random Blood Sugar Level</mat-label>
+                            <mat-label>Nivel de azúcar en sangre aleatorio</mat-label>
                             <input matInput [(ngModel)]="RandomBloodSugarLevel" min="20" max="1000" formControlName="RandomBloodSugarLevel" type="number">
                             <mat-error class="warn" *ngIf="viewControl.get('RandomBloodSugarLevel')?.errors?.['min']">Minimum Random Blood Sugar Level is 20.</mat-error>
                             <mat-error class="warn" *ngIf="viewControl.get('RandomBloodSugarLevel')?.errors?.['max']">Maximum Random Blood Sugar Level is 1000.</mat-error>
                         </mat-form-field>
                         <div class="text-center">
-                            <button mat-raised-button color="primary" type="submit" (click)='saveResults()' [disabled]="!viewControl.valid">Save Changes</button>
+                            <button mat-raised-button color="primary" type="submit" (click)='saveResults()' [disabled]="!viewControl.valid">Guardar Cambios</button>
                         </div>
                     </form>
                 </div>
@@ -42,27 +42,27 @@
     </mat-card>
     <div class="flex justify-center">
         <mat-card class="mat-elevation-z8 mx-3 h-fit w-fit justify-self-end">
-            <b>Displayed Columns</b>
+            <b>Columnas mostradas</b>
             <br/>
             <mat-divider></mat-divider>
             <br/>
             <mat-checkbox (change)="controlView($event.checked, 'SystolicBP')" [checked]="true">
-                <mat-label>Systolic Blood Pressure</mat-label>
+                <mat-label>Presión arterial sistólica</mat-label>
             </mat-checkbox>
             <br/>
 
             <mat-checkbox (change)="controlView($event.checked, 'DiastolicBP')" [checked]="true">
-                <mat-label>Diastolic Blood Pressure</mat-label>
+                <mat-label>Presión arterial diastólica</mat-label>
             </mat-checkbox>
             <br/>
 
             <mat-checkbox (change)="controlView($event.checked, 'Temperature')" [checked]="true">
-                <mat-label>Temperature</mat-label>
+                <mat-label>Temperatura</mat-label>
             </mat-checkbox>
             <br/>
 
             <mat-checkbox (change)="controlView($event.checked, 'RandomBloodSugarLevel')" [checked]="true">
-                <mat-label>Random Blood Sugar Level</mat-label>
+                <mat-label>Nivel de azúcar en sangre aleatorio</mat-label>
             </mat-checkbox>
 
         </mat-card>
