@@ -111,21 +111,19 @@ export class ProfileComponent implements OnInit {
         });
     }
 
-    this._authService
-      .getUser(this.currentUserId)
-      .valueChanges()
-      .subscribe((data) => {
-        this.currentUser.set(this.currentUserId, data!);
-        this.name = Array.from(this.currentUser.values())[0].fullname;
-        this.gender = Array.from(this.currentUser.values())[0].gender;
-        this.birthday = Array.from(this.currentUser.values())[0].birthday;
-        this.phoneNumber = Array.from(
-          this.currentUser.values()
-        )[0].phoneNumber;
-        this.height = Array.from(this.currentUser.values())[0].height;
-        this.weight = Array.from(this.currentUser.values())[0].weight;
-        this.userRole = Array.from(this.currentUser.values())[0].role;
-      });
+    this._authService.getUser(this.currentUserId).valueChanges().subscribe((data) => {
+      if (data) {
+        this.currentUser.set(this.currentUserId, data);
+        this.name = data.fullname ?? 'Nombre no disponible'; // Evita errores de undefined
+        this.gender = data.gender ?? '';
+        this.birthday = data.birthday ?? '';
+        this.phoneNumber = data.phoneNumber ?? '';
+        this.height = data.height ?? '';
+        this.weight = data.weight ?? '';
+        this.userRole = data.role ?? '';
+      }
+    });
+    
 
     let count = 0;
     await this._testsService
@@ -141,12 +139,19 @@ export class ProfileComponent implements OnInit {
       });
     this.rate = this.rate / count;
 
+    console.log("Profile Picture Path:", this.profilePicture);
+
     await this.storage.storage
-      .ref(this.profilePicture)
-      .getDownloadURL()
-      .then((url: string) => {
-        this.profileURL = url;
-      });
+    .ref(this.profilePicture)
+    .getDownloadURL()
+    .then((url: string) => {
+      this.profileURL = url;
+    })
+    .catch((error) => {
+      console.error("Error fetching image:", error);
+      this.profileURL = "assets/default-profile.png"; // Imagen local alternativa
+    });
+
 
     if (this.userRole == 'doctor') {
       this._userService
@@ -166,27 +171,42 @@ export class ProfileComponent implements OnInit {
     _height: any,
     _weight: any
   ) {
-    
     localStorage.setItem('name', _name);
-
-    this._userService.userRef
-      .doc(this.currentUserId)
-      .update({
-        fullname: _name,
-        gender: _gender,
-        birthday: _birthday,
-        phoneNumber: _phoneNumber,
-        height: this.height,
-        weight: this.weight,
+  
+    const userDocRef = this._userService.userRef.doc(this.currentUserId);
+  
+    userDocRef.get().toPromise().then((doc) => {
+      if (doc && doc.exists) { // 🔥 Verifica que 'doc' no sea 'undefined'
+        return userDocRef.update({
+          fullname: _name,
+          gender: _gender,
+          birthday: _birthday,
+          phoneNumber: _phoneNumber,
+          height: _height,
+          weight: _weight,
+        });
+      } else {
+        return userDocRef.set({
+          fullname: _name,
+          gender: _gender,
+          birthday: _birthday,
+          phoneNumber: _phoneNumber,
+          height: _height,
+          weight: _weight,
+        }, { merge: true });
+      }
+    }).then(() => {
+      this._snackBar.open('Your changes were saved.', 'Continue', {
+        horizontalPosition: 'right',
+        verticalPosition: 'bottom',
+        duration: 5000,
+        panelClass: ['mat-toolbar', 'mat-primary'],
       });
-
-    this._snackBar.open('Your changes were saved.', 'Continue', {
-      horizontalPosition: 'right',
-      verticalPosition: 'bottom',
-      duration: 5000,
-      panelClass: ['mat-toolbar', 'mat-primary'],
+    }).catch((error) => {
+      console.error('Error saving account details:', error);
     });
   }
+  
 
   saveMedicalHistory(
     _question1: any,
