@@ -22,7 +22,7 @@ def train():
     parameters = request.get_json()
 
     # Cargamos el dataset principal con enfermedades y síntomas
-    df = pd.read_csv('./model/datasett.csv')
+    df = pd.read_csv('./model/dataset5.csv')
 
     # Limpiamos los datos eliminando espacios en blanco
     cols = df.columns
@@ -112,7 +112,7 @@ def train():
     json_string = json.dumps(Dictionary)
 
     # Guardamos el modelo entrenado en un archivo para su uso posterior
-    joblib.dump(model, 'model.pkl')
+    joblib.dump(model, './model/model.pkl')
 
     # Devolvemos los resultados en formato JSON
     return json.dumps(Dictionary, indent=4)
