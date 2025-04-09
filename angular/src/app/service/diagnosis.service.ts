@@ -8,211 +8,305 @@ export class DiagnosisService {
 
   diagnosisList = [
     new DiagnosisInformation(
-      "Drug Reaction",
-      "Internal Diseases",
-      "An adverse drug reaction (ADR) is an injury caused by taking medication. ADRs may occur following a single dose or prolonged administration of a drug or result from the combination of two or more drugs.",
-      ["Stop irritation","Consult nearest hospital","Stop taking drug","Follow up"]),
-    new DiagnosisInformation(
-      "Malaria",
-      "Infectious Diseases",
-      "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type.",
-      ["Consult nearest hospital","Avoid oily food","Avoid non veg food","Keep mosquitos out"]),
-    new DiagnosisInformation(
-      "Allergy",
-      "Immunology",
-      "An allergy is an immune system response to a foreign substance that's not typically harmful to your body.They can include certain foods, pollen, or pet dander. Your immune system's job is to keep you healthy by fighting harmful pathogens.",
-      ["Apply calamine","Cover area with bandage","Use ice to compress itching"]),
-    new DiagnosisInformation(
-      "Hypothyroidism",
-      "Endocrinology",
-      "Hypothyroidism, also called underactive thyroid or low thyroid, is a disorder of the endocrine system in which the thyroid gland does not produce enough thyroid hormone.",
-      ["Reduce stress","Exercise","Eat healthy","Get proper sleep"]),
-    new DiagnosisInformation(
-      "Psoriasis",
-      "Dermatology",
-      "Psoriasis is a common skin disorder that forms thick, red, bumpy patches covered with silvery scales. They can pop up anywhere, but most appear on the scalp, elbows, knees, and lower back. Psoriasis can't be passed from person to person. It does sometimes happen in members of the same family.",
-      ["Wash hands with warm soapy water","Stop bleeding using pressure","Consult doctor","Salt baths"]),
-    new DiagnosisInformation(
-      "GERD",
-      "Gastroenterology",
-      "Gastroesophageal reflux disease, or GERD, is a digestive disorder that affects the lower esophageal sphincter (LES), the ring of muscle between the esophagus and stomach. Many people, including pregnant women, suffer from heartburn or acid indigestion caused by GERD.",
-      ["Avoid fatty spicy food","Avoid lying down after eating","Maintain healthy weight","Exercise"]),
-    new DiagnosisInformation(
-      "Chronic Cholestasis",
-      "Gastroenterology",
-      "Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine, which is caused by primary damage to the biliary epithelium in most cases",
-      ["Cold baths","Anti itch medicine","Consult doctor","Eat healthy"]),
-    new DiagnosisInformation(
-      "Hepatitis A",
-      "Infectious Diseases",
-      "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function.",
-      ["Consult nearest hospital","Wash hands through","Avoid fatty spicy food","Medication"]),
-    new DiagnosisInformation(
-      "Osteoarthritis",
-      "Rheumatology",
-      "Osteoarthritis is the most common form of arthritis, affecting millions of people worldwide. It occurs when the protective cartilage that cushions the ends of your bones wears down over time.",
-      ["Acetaminophen","Consult nearest hospital","Follow up","Salt baths"]),
-    new DiagnosisInformation(
-      "(Vertigo) Paroxysmal Positional Vertigo",
-      "Neurology",
-      "Benign paroxysmal positional vertigo (BPPV) is one of the most common causes of vertigo — the sudden sensation that you're spinning or that the inside of your head is spinning. Benign paroxysmal positional vertigo causes brief episodes of mild to intense dizziness.",
-      ["Lie down","Avoid sudden change in body","Avoid abrupt head movment","Relax"]),
-    new DiagnosisInformation(
-      "Hypoglycemia",
-      "Endocrinology",
-      "Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions — many rare — can cause low blood sugar in people who don't have diabetes.",
-      ["Lie down on side","Check in pulse","Drink sugary drinks","Consult doctor"]),
-    new DiagnosisInformation(
-      "Acne",
-      "Dermatology",
-      "Acne vulgaris is the formation of comedones, papules, pustules, nodules, and/or cysts as a result of obstruction and inflammation of pilosebaceous units (hair follicles and their accompanying sebaceous gland). Acne develops on the face and upper trunk. It most often affects adolescents.",
-      ["Bath twice","Avoid fatty spicy food","Drink plenty of water","Avoid too many products"]),
-    new DiagnosisInformation(
-      "Diabetes",
-      "Endocrinology",
-      "Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.",
-      ["Have balanced diet","Exercise","Consult doctor","Follow up"]),
-    new DiagnosisInformation(
-      "Impetigo",
-      "Dermatology",
-      "Impetigo is a common and highly contagious skin infection that mainly affects infants and children. Impetigo usually appears as red sores on the face, especially around a child's nose and mouth, and on hands and feet. The sores burst and develop honey-colored crusts.",
-      ["Soak affected area in warm water","Use antibiotics","Remove scabs with wet compressed cloth","Consult doctor"]),
-    new DiagnosisInformation(
-      "Hypertension",
-      "Internal Diseases",
-      "Hypertension (HTN or HT), also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated. High blood pressure typically does not cause symptoms.",
-      ["Meditation","Salt baths","Reduce stress","Get proper sleep"]),
-    new DiagnosisInformation(
-      "Peptic Ulcer Diseae",
-      "Gastroenterology",
-      "Peptic ulcer disease (PUD) is a break in the inner lining of the stomach, the first part of the small intestine, or sometimes the lower esophagus. An ulcer in the stomach is called a gastric ulcer, while one in the first part of the intestines is a duodenal ulcer.",
-      ["Avoid fatty spicy food","Consume probiotic food","Eliminate milk","Limit alcohol"]),
-    new DiagnosisInformation(
-      "Dimorphic Hemorrhoids (Piles)",
-      "General Surgery",
-      "Hemorrhoids, also spelled haemorrhoids, are vascular structures in the anal canal. In their ... Other names, Haemorrhoids, piles, hemorrhoidal disease .",
-      ["Avoid fatty spicy food","Consume probiotic food","Eliminate milk","Limit alcohol"]),
-    new DiagnosisInformation(
-      "Common Cold",
-      "Internal Diseases",
-      "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold.",
-      ["Drink vitamin C rich drinks","Take vapour","Avoid cold food","Keep fever in check"]),
-    new DiagnosisInformation(
-      "Chicken Pox",
-      "Infectious Diseases",
-      "Chicken pox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy, blister-like rash. The rash first appears on the chest, back, and face, and then spreads over the entire body, causing between 250 and 500 itchy blisters.",
-      ["Use neem in bathing","Consume neem leaves","Take vaccine","Avoid public places"]),
-    new DiagnosisInformation(
-      "Cervical Spondylosis",
-      "Rheumatology",
-      "Cervical spondylosis is a general term for age-related wear and tear affecting the spinal disks in your neck. As the disks dehydrate and shrink, signs of osteoarthritis develop, including bony projections along the edges of bones (bone spurs).",
-      ["Use heating pad or cold pack","Exercise","Take otc pain reliver","Consult doctor"]),
-    new DiagnosisInformation(
-      "Hyperthyroidism",
-      "Internal Diseases",
-      "Hyperthyroidism (overactive thyroid) occurs when your thyroid gland produces too much of the hormone thyroxine. Hyperthyroidism can accelerate your body's metabolism, causing unintentional weight loss and a rapid or irregular heartbeat.",
-      ["Eat healthy","Massage","Use lemon balm","Take radioactive iodine treatment"]),
-    new DiagnosisInformation(
-      "Urinary Tract Infection",
-      "Internal Diseases",
-      "Urinary tract infection: An infection of the kidney, ureter, bladder, or urethra. Abbreviated UTI. Not everyone with a UTI has symptoms, but common symptoms include a frequent urge to urinate and pain or burning when urinating.",
-      ["Drink plenty of water","Increase vitamin C intake","Drink cranberry juice","Take probiotics"]),
-    new DiagnosisInformation(
-      "Varicose Veins",
-      "Internal Diseases",
-      "A vein that has enlarged and twisted, often appearing as a bulging, blue blood vessel that is clearly visible through the skin. Varicose veins are most common in older adults, particularly women, and occur especially on the legs.",
-      ["Lie down flat and raise the leg high","Use oinments","Use vein compression","Don't stand still for long"]),
-    new DiagnosisInformation(
-      "AIDS",
-      "Immunology",
-      "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease.",
-      ["Avoid open cuts","Wear personal protective equipment if possible","Consult doctor","Follow up"]),
-    new DiagnosisInformation(
-      "Paralysis (Brain Hemorrhage)",
-      "Neurology",
-      "Intracerebral hemorrhage (ICH) is when blood suddenly bursts into brain tissue, causing damage to your brain. Symptoms usually appear suddenly during ICH. They include headache, weakness, confusion, and paralysis, particularly on one side of your body.",
-      ["Massage","Eat healthy","Exercise","Consult doctor"]),
-    new DiagnosisInformation(
-      "Typhoid",
-      "Infectious Diseases",
-      "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe.",
-      ["Eat high calorie vegitables","Antiboitic therapy","Consult doctor","Medication"]),
-    new DiagnosisInformation(
-      "Hepatitis B",
-      "Infectious Diseases",
-      "Hepatitis B is an infection of your liver. It can cause scarring of the organ, liver failure, and cancer. It can be fatal if it isn't treated. It's spread when people come in contact with the blood, open sores, or body fluids of someone who has the hepatitis B virus.",
-      ["Consult nearest hospital","Vaccination","Eat healthy","Medication"]),
-    new DiagnosisInformation(
-      "Fungal Infection",
-      "Infectious Diseases",
-      "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi.",
-      ["Bath twice","Use detol or neem in bathing water","Keep infected area dry","Use clean cloths"]),
-    new DiagnosisInformation(
-      "Hepatitis C",
-      "Infectious Diseases",
-      "Inflammation of the liver due to the hepatitis C virus (HCV), which is usually spread via blood transfusion (rare), hemodialysis, and needle sticks. The damage hepatitis C does to the liver can lead to cirrhosis and its complications as well as cancer.",
-      ["Consult nearest hospital","Vaccination","Eat healthy","Medication"]),
-    new DiagnosisInformation(
-      "Migraine",
-      "Neurology",
-      "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities.",
-      ["Meditation","Reduce stress","Use polaroid glasses in sun","Consult doctor"]),
-    new DiagnosisInformation(
-      "Bronchial Asthma",
-      "Chest Diseases",
-      "Bronchial asthma is a medical condition which causes the airway path of the lungs to swell and narrow. Due to this swelling, the air path produces excess mucus making it hard to breathe, which results in coughing, short breath, and wheezing. The disease is chronic and interferes with daily working.",
-      ["Switch to loose cloothing","Take deep breaths","Get away from trigger","Seek help"]),
-    new DiagnosisInformation(
-      "Alcoholic Hepatitis",
-      "Gastroenterology",
-      "Alcoholic hepatitis is a diseased, inflammatory condition of the liver caused by heavy alcohol consumption over an extended period of time. It's also aggravated by binge drinking and ongoing alcohol use. If you develop this condition, you must stop drinking alcohol",
-      ["Stop alcohol consumption","Consult doctor","Medication","Follow up"]),
-    new DiagnosisInformation(
-      "Jaundice",
-      "Internal Diseases",
-      "Yellow staining of the skin and sclerae (the whites of the eyes) by abnormally high blood levels of the bile pigment bilirubin. The yellowing extends to other tissues and body fluids. Jaundice was once called the \"morbus regius\" (the regal disease) in the belief that only the touch of a king could cure it",
-      ["Drink plenty of water","Consume milk thistle","Eat fruits and high fiberous food","Medication"]),
-    new DiagnosisInformation(
-      "Hepatitis E",
-      "Infectious Diseases",
-      "A rare form of liver inflammation caused by infection with the hepatitis E virus (HEV). It is transmitted via food or drink handled by an infected person or through infected water supplies in areas where fecal matter may get into the water. Hepatitis E does not cause chronic liver disease.",
-      ["Stop alcohol consumption","Rest","Consult doctor","Medication"]),
-    new DiagnosisInformation(
-      "Dengue",
-      "Infectious Diseases",
-      "An acute infectious disease caused by a flavivirus (species Dengue virus of the genus Flavivirus), transmitted by aedes mosquitoes, and characterized by headache, severe joint pain, and a rash. — called also breakbone fever, dengue fever.",
-      ["Drink papaya leaf juice","Avoid fatty spicy food","Keep mosquitos away","Keep hydrated"]),
-    new DiagnosisInformation(
-      "Hepatitis D",
-      "Infectious Diseases",
-      "Hepatitis D, also known as the hepatitis delta virus, is an infection that causes the liver to become inflamed. This swelling can impair liver function and cause long-term liver problems, including liver scarring and cancer. The condition is caused by the hepatitis D virus (HDV).",
-      ["Consult doctor","Medication","Eat healthy","Follow up"]),
-    new DiagnosisInformation(
-      "Heart Attack",
-      "Cardiology",
-      "The death of heart muscle due to the loss of blood supply. The loss of blood supply is usually caused by a complete blockage of a coronary artery, one of the arteries that supplies blood to the heart muscle.",
-      ["Call ambulance","Chew or swallow asprin","Keep calm"]),
-    new DiagnosisInformation(
-      "Pneumonia",
-      "Chest Diseases",
-      "Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe.",
-      ["Consult doctor","Medication","Rest","Follow up"]),
-    new DiagnosisInformation(
-      "Arthritis",
-      "Rheumatology",
-      "Arthritis is the swelling and tenderness of one or more of your joints. The main symptoms of arthritis are joint pain and stiffness, which typically worsen with age. The most common types of arthritis are osteoarthritis and rheumatoid arthritis.",
-      ["Exercise","Use hot and cold therapy","Try acupuncture","Massage"]),
-    new DiagnosisInformation(
-      "Gastroenteritis",
-      "Gastroenterology",
-      "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach, and large and small intestines. Viral and bacterial gastroenteritis are intestinal infections associated with symptoms of diarrhea , abdominal cramps, nausea , and vomiting .",
-      ["Stop eating solid food for while","Try taking small sips of water","Rest","Ease back into eating"]),
-    new DiagnosisInformation(
-      "Tuberculosis",
-      "Infectious Diseases",
-      "Tuberculosis (TB) is an infectious disease usually caused by Mycobacterium tuberculosis (MTB) bacteria. Tuberculosis generally affects the lungs, but can also affect other parts of the body. Most infections show no symptoms, in which case it is known as latent tuberculosis.",
-      ["Cover mouth","Consult doctor","Medication","Rest"])
-    ]
+      "Alucinaciones",
+      "Psiquiatría",
+      "Las alucinaciones son percepciones sensoriales falsas, como escuchar voces o ver cosas que no están presentes. Son un síntoma común de la esquizofrenia y pueden afectar significativamente el funcionamiento diario.",
+      ["Buscar evaluación psiquiátrica", "Evitar situaciones estresantes", "Considerar tratamiento antipsicótico", "Participar en terapia"]
+  ),
+  new DiagnosisInformation(
+      "Ideas delirantes",
+      "Psiquiatría",
+      "Las ideas delirantes implican mantener creencias falsas con firmeza a pesar de la evidencia clara en contra, como pensar que otros conspiran en su contra.",
+      ["Consultar a un psiquiatra", "Terapia cognitivo-conductual", "Cumplimiento del tratamiento", "Involucrar apoyo familiar"]
+  ),
+  new DiagnosisInformation(
+      "Control del pensamiento",
+      "Psiquiatría",
+      "El control del pensamiento se refiere a la creencia de que los pensamientos están siendo influenciados o controlados por fuerzas externas, un tipo de delirio común en la esquizofrenia.",
+      ["Evaluación psiquiátrica inmediata", "Medicamentos antipsicóticos", "Técnicas de orientación a la realidad", "Monitoreo terapéutico"]
+  ),
+  new DiagnosisInformation(
+      "Obsesiones de presencia",
+      "Psiquiatría",
+      "La obsesión con una presencia no vista se refiere a la sensación persistente o creencia de que alguien o algo está presente cuando no lo está, lo que contribuye a la ansiedad y la confusión.",
+      ["Técnicas de enraizamiento terapéutico", "Revisión de medicación", "Reafirmación del entorno", "Psicoterapia de apoyo"]
+  ),
+  new DiagnosisInformation(
+      "Desorganización del pensamiento",
+      "Psiquiatría",
+      "La desorganización del pensamiento afecta la capacidad para mantener conexiones lógicas, lo que conduce a un discurso y comportamiento incoherente o tangencial.",
+      ["Rutina diaria estructurada", "Terapia del habla", "Medicamentos psiquiátricos", "Terapia de remediación cognitiva"]
+  ),
+  new DiagnosisInformation(
+      "Lenguaje desorganizado",
+      "Psiquiatría",
+      "El lenguaje desorganizado se manifiesta mediante incoherencias, cambios frecuentes de tema o uso sin sentido de palabras. Refleja pensamiento desorganizado típico en la esquizofrenia.",
+      ["Evaluación por terapeuta del lenguaje", "Técnicas de conversación con apoyo", "Cumplimiento de medicación", "Terapia conductual"]
+  ),
+  new DiagnosisInformation(
+      "Catatonía",
+      "Psiquiatría",
+      "La catatonía es una alteración psicomotora que puede incluir rigidez, falta de movimiento o movimientos excesivos, y se observa en casos graves de esquizofrenia.",
+      ["Atención médica inmediata", "Tratamiento con benzodiacepinas", "Terapia electroconvulsiva (si es necesario)", "Monitoreo continuo"]
+  ),
+  new DiagnosisInformation(
+      "Paranoia intensa",
+      "Psiquiatría",
+      "La paranoia intensa se caracteriza por desconfianza extrema y sospechas irracionales, lo que puede llevar al aislamiento social y angustia emocional.",
+      ["Reafirmación terapéutica", "Entorno de baja estimulación", "Medicamentos antipsicóticos", "Supervisión psiquiátrica"]
+  ),
+  new DiagnosisInformation(
+      "Comportamiento motor desorganizado",
+      "Psiquiatría",
+      "El comportamiento motor desorganizado incluye agitación impredecible, reacciones inapropiadas o movimientos sin propósito, interfiriendo con la vida diaria.",
+      ["Ajustes de seguridad en el entorno", "Terapia ocupacional", "Apoyo conductual", "Manejo de medicación"]
+  ),
+  new DiagnosisInformation(
+      "Dificultades en teoría de la mente",
+      "Psiquiatría",
+      "Las dificultades en la teoría de la mente afectan la capacidad para comprender los pensamientos, emociones e intenciones de los demás, lo que lleva a malentendidos sociales.",
+      ["Entrenamiento en habilidades sociales", "Terapia grupal", "Rehabilitación cognitiva", "Psicoeducación familiar"]
+  ),
+  new DiagnosisInformation(
+    "Eco del pensamiento",
+    "Psiquiatría",
+    "El eco del pensamiento es un fenómeno en el que la persona percibe que sus propios pensamientos se repiten en voz alta dentro de su mente, como si alguien más los repitiera. Es común en cuadros psicóticos.",
+    ["Evaluación psiquiátrica", "Terapia antipsicótica", "Entrenamiento en control cognitivo", "Seguimiento regular"]
+),
+new DiagnosisInformation(
+    "Comportamiento social inadecuado",
+    "Psiquiatría",
+    "El comportamiento social inadecuado se refiere a acciones que no se ajustan a normas sociales, como invadir el espacio personal o hablar fuera de contexto. Puede ser un signo de deterioro funcional.",
+    ["Psicoeducación social", "Terapia conductual", "Supervisión familiar", "Apoyo en ambientes estructurados"]
+),
+new DiagnosisInformation(
+    "Hipoexpresividad emocional",
+    "Psiquiatría",
+    "La hipoexpresividad emocional implica una disminución notable en la expresión emocional, afectando la comunicación no verbal y la percepción social.",
+    ["Terapia ocupacional", "Ejercicios de expresión emocional", "Terapia de interacción social", "Evaluación psicológica"]
+),
+new DiagnosisInformation(
+    "Expresión facial reducida",
+    "Psiquiatría",
+    "La expresión facial reducida es un síntoma negativo de la esquizofrenia caracterizado por una disminución en los gestos faciales espontáneos y reacciones emocionales visibles.",
+    ["Estimulación emocional", "Terapia de espejo", "Intervención psicosocial", "Terapia con feedback visual"]
+),
+new DiagnosisInformation(
+    "Gesticulación reducida",
+    "Psiquiatría",
+    "La gesticulación reducida se refiere a la disminución en el uso de movimientos corporales para comunicarse, lo cual puede dificultar la interacción interpersonal.",
+    ["Terapia de habilidades sociales", "Terapias expresivas (como teatro o arte)", "Estimulación motora", "Psicoeducación"]
+),
+new DiagnosisInformation(
+    "Contacto visual bajo",
+    "Psiquiatría",
+    "El contacto visual bajo es una dificultad común en personas con esquizofrenia y puede reflejar aislamiento emocional, ansiedad social o síntomas negativos.",
+    ["Entrenamiento en habilidades sociales", "Terapia cognitivo-conductual", "Apoyo en grupo", "Ejercicios de interacción visual"]
+),
+new DiagnosisInformation(
+    "Afectividad inapropiada",
+    "Psiquiatría",
+    "La afectividad inapropiada ocurre cuando las respuestas emocionales no coinciden con la situación, como reír en momentos tristes o mostrar enojo sin motivo aparente.",
+    ["Evaluación clínica especializada", "Reestructuración cognitiva", "Terapia emocional", "Medicamentos estabilizadores"]
+),
+new DiagnosisInformation(
+    "Alogia",
+    "Psiquiatría",
+    "La alogia es un síntoma negativo que se manifiesta como un empobrecimiento general del lenguaje, dificultando la comunicación verbal.",
+    ["Terapia del lenguaje", "Terapia ocupacional", "Intervención cognitiva", "Apoyo comunicacional estructurado"]
+),
+new DiagnosisInformation(
+    "Alogia - pobreza del habla",
+    "Psiquiatría",
+    "La pobreza del habla es una forma específica de alogia donde la persona produce pocas palabras, generalmente en respuestas breves y poco elaboradas.",
+    ["Estimulación verbal guiada", "Terapia del lenguaje", "Rutinas de conversación", "Apoyo terapéutico frecuente"]
+),
+new DiagnosisInformation(
+    "Alogia - pobreza de contenido",
+    "Psiquiatría",
+    "La pobreza de contenido se presenta cuando el habla es abundante pero con poco contenido significativo, reflejando pensamiento vacío o desorganizado.",
+    ["Terapia de comunicación estructurada", "Reforzamiento del pensamiento lógico", "Apoyo en expresión verbal", "Evaluación neuropsicológica"]
+),
+new DiagnosisInformation(
+  "Alogia - bloqueos del pensamiento",
+  "Psiquiatría",
+  "Los bloqueos del pensamiento son interrupciones súbitas en el flujo de ideas, lo cual genera pausas prolongadas o silencios durante la conversación. Es común en la esquizofrenia como parte de los síntomas negativos.",
+  ["Terapia del lenguaje", "Entrenamiento cognitivo", "Apoyo terapéutico en conversación", "Evaluación psiquiátrica"]
+),
+new DiagnosisInformation(
+  "Abulia",
+  "Psiquiatría",
+  "La abulia es una disminución profunda de la motivación y la voluntad para iniciar actividades, incluso básicas. Está asociada a trastornos psicóticos como la esquizofrenia.",
+  ["Rutina diaria estructurada", "Terapia conductual activadora", "Psicoeducación", "Tratamiento farmacológico supervisado"]
+),
+new DiagnosisInformation(
+  "Abulia - higiene",
+  "Psiquiatría",
+  "La abulia relacionada con la higiene se refiere a la falta de motivación para realizar actividades básicas de autocuidado, como el aseo personal.",
+  ["Supervisión familiar", "Terapia ocupacional", "Refuerzo positivo", "Monitoreo de rutinas de autocuidado"]
+),
+new DiagnosisInformation(
+  "Abulia - trabajo o estudio",
+  "Psiquiatría",
+  "Este subtipo de abulia afecta directamente la capacidad para mantener responsabilidades académicas o laborales, debido a la apatía o desmotivación.",
+  ["Apoyo psicosocial", "Terapia estructurada", "Metas progresivas", "Apoyo profesional vocacional"]
+),
+new DiagnosisInformation(
+  "Anergia física",
+  "Psiquiatría",
+  "La anergia física se manifiesta como fatiga extrema o falta de energía, sin causa médica aparente. A menudo es un síntoma negativo de la esquizofrenia.",
+  ["Evaluación médica y psiquiátrica", "Ejercicio físico gradual", "Intervención motivacional", "Apoyo terapéutico"]
+),
+new DiagnosisInformation(
+  "Anhedonia",
+  "Psiquiatría",
+  "La anhedonia es la incapacidad para experimentar placer o interés en actividades que antes resultaban placenteras. Es un síntoma central de los trastornos psicóticos.",
+  ["Terapia cognitivo-conductual", "Actividades estructuradas", "Entrenamiento en reconocimiento emocional", "Evaluación farmacológica"]
+),
+new DiagnosisInformation(
+  "Anhedonia - sociabilidad",
+  "Psiquiatría",
+  "Esta forma de anhedonia implica falta de interés en establecer o mantener relaciones sociales, lo cual puede conducir al aislamiento progresivo.",
+  ["Terapia grupal", "Entrenamiento en habilidades sociales", "Actividades supervisadas", "Apoyo familiar"]
+),
+new DiagnosisInformation(
+  "Anhedonia - intereses recreativos",
+  "Psiquiatría",
+  "Se refiere a la pérdida de interés en actividades recreativas como pasatiempos, deportes o arte, reflejando una pérdida general del disfrute.",
+  ["Terapia ocupacional", "Agenda de actividades", "Estimulación dirigida", "Motivación reforzada por logros"]
+),
+new DiagnosisInformation(
+  "Anhedonia - intereses sexuales",
+  "Psiquiatría",
+  "Este tipo de anhedonia implica una disminución significativa o total del deseo o disfrute de la actividad sexual, afectando relaciones íntimas.",
+  ["Terapia sexual con especialista", "Psicoeducación", "Terapia de pareja (si aplica)", "Revisión farmacológica"]
+),
+new DiagnosisInformation(
+  "Anhedonia - relaciones con amigos",
+  "Psiquiatría",
+  "La anhedonia social también puede manifestarse como desinterés o incapacidad para mantener vínculos amistosos, reduciendo el soporte social.",
+  ["Actividades de socialización guiada", "Intervención grupal", "Apoyo comunitario", "Terapia emocional"]
+),
+new DiagnosisInformation(
+  "Anhedonia - relaciones con la familia",
+  "Psiquiatría",
+  "Esta forma de anhedonia se refiere a la pérdida de interés en mantener vínculos afectivos con miembros de la familia, generando aislamiento y deterioro de la red de apoyo.",
+  ["Terapia familiar", "Reforzamiento de vínculos afectivos", "Psicoeducación en el entorno", "Actividades terapéuticas en grupo"]
+),
+new DiagnosisInformation(
+  "Deterioro de la memoria",
+  "Psiquiatría",
+  "El deterioro de la memoria, especialmente la memoria de trabajo, es común en personas con esquizofrenia, afectando el aprendizaje y el funcionamiento cotidiano.",
+  ["Ejercicios de memoria", "Estimulación cognitiva", "Apoyo con recordatorios visuales", "Rehabilitación neuropsicológica"]
+),
+new DiagnosisInformation(
+  "Deterioro de la atención",
+  "Psiquiatría",
+  "Las dificultades atencionales afectan la capacidad para mantener el foco y procesar información, lo que complica tareas simples y conversaciones.",
+  ["Terapia cognitiva", "Rutinas estructuradas", "Evitar multitareas", "Técnicas de mindfulness"]
+),
+new DiagnosisInformation(
+  "Déficit en el procesamiento de la información",
+  "Psiquiatría",
+  "Este déficit implica lentitud para comprender, responder o interpretar estímulos, generando confusión e interferencia en la vida diaria.",
+  ["Terapias de estimulación cognitiva", "Apoyo en la comunicación", "Actividades con instrucciones claras", "Adaptaciones ambientales"]
+),
+new DiagnosisInformation(
+  "Tristeza",
+  "Psiquiatría",
+  "La tristeza persistente puede estar presente en esquizofrenia, sobre todo en fases depresivas o tras eventos estresantes, agravando otros síntomas.",
+  ["Acompañamiento psicológico", "Terapia emocional", "Técnicas de afrontamiento", "Supervisión psiquiátrica"]
+),
+new DiagnosisInformation(
+  "Sentimiento de culpa",
+  "Psiquiatría",
+  "El sentimiento de culpa puede surgir por percepciones distorsionadas de haber hecho daño a otros, incluso sin fundamento real, generando malestar intenso.",
+  ["Reestructuración cognitiva", "Terapia individual", "Apoyo emocional", "Evaluación de pensamientos intrusivos"]
+),
+new DiagnosisInformation(
+  "Cambios en el apetito",
+  "Psiquiatría",
+  "Las alteraciones en el apetito pueden ir desde la pérdida total del hambre hasta un aumento excesivo, a menudo relacionado con el estado emocional o efectos de medicamentos.",
+  ["Evaluación nutricional", "Plan de alimentación supervisado", "Registro de hábitos", "Ajustes farmacológicos si es necesario"]
+),
+new DiagnosisInformation(
+  "Sueño o fatiga",
+  "Psiquiatría",
+  "Las alteraciones del sueño, como insomnio o somnolencia excesiva, junto con fatiga constante, son frecuentes en esquizofrenia y pueden empeorar otros síntomas.",
+  ["Higiene del sueño", "Rutinas de descanso", "Evaluación del tratamiento farmacológico", "Terapias de relajación"]
+),
+new DiagnosisInformation(
+  "Disminución del libido",
+  "Psiquiatría",
+  "La disminución del deseo sexual es común en esquizofrenia, ya sea por síntomas negativos, efectos secundarios de medicamentos o factores emocionales.",
+  ["Terapia sexual", "Apoyo emocional", "Evaluación de efectos secundarios", "Psicoeducación sobre sexualidad"]
+),
+new DiagnosisInformation(
+  "Dificultad de concentración",
+  "Psiquiatría",
+  "Este síntoma se manifiesta como incapacidad para mantener la atención en tareas específicas, afectando el rendimiento cognitivo y funcional.",
+  ["Ejercicios de enfoque atencional", "Ambientes sin distracciones", "Terapia cognitiva", "Técnicas de organización"]
+),
+new DiagnosisInformation(
+  "Ideas suicidas",
+  "Psiquiatría",
+  "Las ideas suicidas pueden presentarse en personas con esquizofrenia, especialmente durante episodios depresivos, desesperanza o en respuesta a alucinaciones o delirios.",
+  ["Evaluación de riesgo suicida", "Atención psiquiátrica inmediata", "Intervención en crisis", "Red de apoyo terapéutico"]
+),
+new DiagnosisInformation(
+  "Preocupación",
+  "Psiquiatría",
+  "La preocupación constante o excesiva por situaciones irreales o hipotéticas es común en pacientes con esquizofrenia, particularmente en fases ansiosas.",
+  ["Terapia cognitiva", "Técnicas de relajación", "Psicoeducación sobre ansiedad", "Supervisión farmacológica"]
+),
+new DiagnosisInformation(
+  "Nerviosismo",
+  "Psiquiatría",
+  "El nerviosismo puede manifestarse como una respuesta de inquietud emocional persistente, a veces asociada a síntomas psicóticos o ansiedad comórbida.",
+  ["Ejercicios de respiración", "Terapia emocional", "Técnicas de afrontamiento", "Intervención psicoeducativa"]
+),
+new DiagnosisInformation(
+  "Pensamientos intrusivos",
+  "Psiquiatría",
+  "Los pensamientos intrusivos son ideas no deseadas, repetitivas y perturbadoras que generan ansiedad o angustia, frecuentes en trastornos psicóticos.",
+  ["Terapia cognitivo-conductual", "Registro de pensamientos", "Desensibilización progresiva", "Evaluación psiquiátrica"]
+),
+new DiagnosisInformation(
+  "Taquicardia",
+  "Psiquiatría",
+  "La taquicardia, o aumento anormal del ritmo cardíaco, puede ser resultado de episodios de ansiedad intensa o efectos secundarios de medicamentos.",
+  ["Evaluación médica", "Técnicas de respiración", "Reducción del estrés", "Revisión de tratamiento farmacológico"]
+),
+new DiagnosisInformation(
+  "Sudoración",
+  "Psiquiatría",
+  "La sudoración excesiva puede presentarse durante crisis de ansiedad o ataques de pánico, los cuales pueden coexistir con la esquizofrenia.",
+  ["Relajación muscular progresiva", "Ambiente ventilado", "Evaluación por endocrinología si persiste", "Terapia psicológica"]
+),
+new DiagnosisInformation(
+  "Temblores",
+  "Psiquiatría",
+  "Los temblores pueden deberse al uso de medicamentos antipsicóticos o a episodios de ansiedad. Deben diferenciarse de trastornos neurológicos.",
+  ["Consulta médica", "Cambio o ajuste de medicación", "Ejercicios de relajación", "Seguimiento neurológico si es necesario"]
+),
+new DiagnosisInformation(
+  "Disnea",
+  "Psiquiatría",
+  "La disnea, o dificultad para respirar, puede acompañar episodios de ansiedad aguda o ataques de pánico en pacientes con esquizofrenia.",
+  ["Evaluación médica urgente", "Técnicas de respiración controlada", "Ambiente calmado", "Supervisión terapéutica"]
+),
+new DiagnosisInformation(
+  "Hipervigilancia",
+  "Psiquiatría",
+  "La hipervigilancia es un estado de alerta exagerado, a menudo vinculado con paranoia o ansiedad, y puede presentarse en cuadros esquizofrénicos.",
+  ["Terapia emocional", "Reducción de estímulos", "Psicoeducación sobre percepciones distorsionadas", "Tratamiento farmacológico"]
+),
+new DiagnosisInformation(
+  "Irritabilidad",
+  "Psiquiatría",
+  "La irritabilidad puede ser un síntoma asociado al estrés, frustración o síntomas psicóticos activos, generando conflictos interpersonales.",
+  ["Terapia conductual", "Control de impulsos", "Ambiente estructurado", "Supervisión de medicación"]
+)]
 
   constructor() { }
 
