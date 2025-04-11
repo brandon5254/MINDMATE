@@ -104,9 +104,8 @@ export class DiagnosisService {
       "Esquizofrenia residual",
       "Psiquiatría",
       "El deterioro funcional se manifiesta como dificultad para llevar una vida autónoma, mantener relaciones o trabajar, a pesar de la ausencia de síntomas psicóticos agudos.",
-      ["Terapia ocupacional", "Planificación de vida asistida", "Apoyo familiar continuo", "Rehabilitación vocacional"]
-    ),
-  ];
+      ["Terapia ocupacional", "Planificación de vida asistida", "Apoyo familiar continuo", "Rehabilitación vocacional"])
+  ]
 
   constructor() { }
 
