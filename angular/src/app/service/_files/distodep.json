@@ -1,8 +1,8 @@
 [
-  { "disease": "Esquizofrenia paranoide", "department": "Psiquiatría" },
-  { "disease": "Esquizofrenia desorganizada", "department": "Psiquiatría" },
-  { "disease": "Esquizofrenia catatónica", "department": "Psiquiatría" },
-  { "disease": "Esquizofrenia indiferenciada", "department": "Psiquiatría" },
-  { "disease": "Esquizofrenia residual", "department": "Psiquiatría" }
+  { "disease": "Esquizofrenia_paranoide", "department": "Psiquiatría" },
+  { "disease": "Esquizofrenia_desorganizada", "department": "Psiquiatría" },
+  { "disease": "Esquizofrenia_catatónica", "department": "Psiquiatría" },
+  { "disease": "Esquizofrenia_indiferenciada", "department": "Psiquiatría" },
+  { "disease": "Esquizofrenia_residual", "department": "Psiquiatría" }
 ]
 

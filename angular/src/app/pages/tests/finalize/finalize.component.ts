@@ -18,7 +18,7 @@ export class FinalizeComponent implements OnInit {
   
   myControl = new FormControl();
 
-  diagnoses: string[] = ["Esquizofrenia paranoide","Esquizofrenia desorganizada","Esquizofrenia catatónica","Esquizofrenia indiferenciada","Esquizofrenia residual"];
+  diagnoses: string[] = ["Esquizofrenia_paranoide","Esquizofrenia_desorganizada","Esquizofrenia_catatónica","Esquizofrenia_indiferenciada","Esquizofrenia_residual"];
   currentTest = new Map<string, Test>();
   currentPatientName!: string;
   currentDate!: number;
