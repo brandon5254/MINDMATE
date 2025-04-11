@@ -14,7 +14,7 @@
                 <mat-grid-list cols="2" rowHeight="3:1">
                     <mat-grid-tile>
                         <div appearance="fill" class="w-full">
-                            <b>Full Name</b><br>
+                            <b>Nombre Completo</b><br>
                             <span>{{currentUser.fullname}}</span>
                         </div>
                     </mat-grid-tile> 
@@ -51,52 +51,53 @@
                 </mat-grid-list>
             </div>
         </div>
-        <div class="documents rounded-xl border-2">
-            <h1 class="card-header text-center">Documents</h1>
-            <div class="p-6" *ngIf="fileList.size > 0; else noDocuments">
+        <div class="documentos rounded-xl border-2">
+            <h1 class="card-header text-center">Documentos</h1>
+            <div class="p-6" *ngIf="fileList.size > 0; else noDocumentos">
                 <ul>
                     <li *ngFor="let file of fileList | keyvalue">
                         <a href="{{ file.value }}">• {{file.key}}</a>
                     </li>
                 </ul>
             </div>
-            <ng-template class="p-6" #noDocuments>
+            <ng-template class="p-6" #noDocumentos>
                 <div class="p-6">
-                    <p>No Documents.</p>
+                    <p>No Documentos.</p>
                 </div>
             </ng-template>
         </div>
         <div class="medicalHistory col-span-2 rounded-xl border-2">
-            <h1 class="card-header text-center" >Medical History</h1>
+            <h1 class="card-header text-center" >Historial médico</h1>
             <div class="p-6 col">
                 <div *ngIf="currentMedicalHistory">
                     <div *ngIf="currentMedicalHistory.question1">
-                        <b>What are your medical and surgical histories? Please specify.</b><br>
+                        <b>¿Cuáles son sus antecedentes médicos y quirúrgicos? Por favor, especifique..</b><br>
                         <span> {{ currentMedicalHistory.question1 }} </span><br><br>
                     </div>
                         
                     <div *ngIf="currentMedicalHistory.question2">
-                        <b>Do you take prescription or non-prescription medications? If yes, please specify.</b><br>
+                        <b>¿Toma medicamentos con o sin receta? Si es así, por favor especifique.</b><br>
                         <span> {{ currentMedicalHistory.question2 }} </span><br><br>
                     </div>
                         
                     <div *ngIf="currentMedicalHistory.question3">
-                        <b>Do you have any allergies? If yes, please specify.</b><br>
+                        <b>¿Tiene alguna alergia? Si es así, por favor, especifíquela.</b><br>
                         <span> {{ currentMedicalHistory.question3 }} </span><br><br>
                     </div>
                         
                     <div *ngIf="currentMedicalHistory.question4">
-                        <b>What is your smoking, alcohol, and illicit drug use history? Please specify.</b><br>
+                        <b>¿Cuál es su historial de consumo de tabaco, alcohol y drogas ilegales? Por favor, especifique.</b><br>
                         <span> {{ currentMedicalHistory.question4 }} </span><br><br>
                     </div>
 
                     <div *ngIf="currentMedicalHistory.question5">
-                        <b>Is there any diagnosed disease in your family? If yes, please specify.</b><br>
+                        <b>¿Hay alguna enfermedad diagnosticada en su familia? En caso afirmativo, por favor, especifique.</b><br>
                         <span> {{ currentMedicalHistory.question5 }} </span>
                     </div>
                 </div>
                 <div *ngIf="!currentMedicalHistory">
-                    <p>{{currentUser.fullname}} does not have a medical history.</p>
+                    <p>{{currentUser.fullname}} no tiene un Historial médico
+                        .</p>
                 </div>
                 
             </div>

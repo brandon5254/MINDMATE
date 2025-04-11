@@ -26,6 +26,24 @@ export class DiagnosisService {
       "La suspicacia o desconfianza extrema hacia los demás puede llevar a dificultades en las relaciones interpersonales y aislamiento.",
       ["Evaluación psicológica", "Psicoeducación", "Fomentar relaciones de confianza", "Terapia de apoyo"]
     ),
+    new DiagnosisInformation(
+      "Esquizofrenia_paranoide",
+      "Psiquiatría",
+      "La creencia de que otros controlan los pensamientos propios refleja un trastorno grave de la percepción del yo, característico de la esquizofrenia paranoide.",
+      ["Evaluación psiquiátrica", "Terapia cognitivo-conductual", "Tratamiento antipsicótico", "Seguimiento continuo"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_paranoide",
+      "Psiquiatría",
+      "El eco del pensamiento implica que el individuo percibe sus pensamientos como repetidos o escuchados por otros, una alteración propia del contenido delirante.",
+      ["Tratamiento antipsicótico", "Monitoreo clínico", "Terapia de apoyo", "Evitar estímulos estresantes"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_paranoide",
+      "Psiquiatría",
+      "La hipervigilancia e irritabilidad son comunes en fases activas de la esquizofrenia paranoide, con estados de alerta excesiva y respuestas agresivas.",
+      ["Terapia de regulación emocional", "Reducción de estímulos estresantes", "Evaluación farmacológica", "Apoyo psicosocial"]
+    ),
 
     // ESQUIZOFRENIA DESORGANIZADA
     new DiagnosisInformation(
@@ -45,6 +63,36 @@ export class DiagnosisService {
       "Psiquiatría",
       "La afectividad inapropiada se refiere a respuestas emocionales que no concuerdan con el contexto, como reír durante una situación triste.",
       ["Evaluación psiquiátrica", "Entrenamiento en reconocimiento emocional", "Terapia emocional", "Seguimiento clínico"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_desorganizada",
+      "Psiquiatría",
+      "La pobreza en el contenido del lenguaje, típica de la alogia, refleja una grave alteración en la organización del pensamiento.",
+      ["Rehabilitación del lenguaje", "Terapia de estimulación cognitiva", "Apoyo en la comunicación funcional", "Intervención psicosocial"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_desorganizada",
+      "Psiquiatría",
+      "Las obsesiones y pensamientos intrusivos pueden formar parte de una desorganización cognitiva donde el contenido mental se vuelve repetitivo e invasivo.",
+      ["Terapia cognitivo-conductual", "Reducción de ansiedad", "Psicoeducación", "Tratamiento farmacológico"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_desorganizada",
+      "Psiquiatría",
+      "El comportamiento social inadecuado se manifiesta como falta de criterio en interacciones, característico del subtipo desorganizado.",
+      ["Entrenamiento en habilidades sociales", "Supervisión psicosocial", "Terapia conductual", "Apoyo familiar"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_desorganizada",
+      "Psiquiatría",
+      "Los bloqueos del pensamiento y la pobreza en el contenido verbal, conocidos como alogia, son signos de desorganización mental.",
+      ["Terapia del lenguaje", "Estimulación cognitiva", "Terapia cognitivo-conductual", "Apoyo estructurado"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_desorganizada",
+      "Psiquiatría",
+      "El deterioro en la memoria, la atención y el procesamiento de información afectan las funciones cognitivas superiores.",
+      ["Rehabilitación neurocognitiva", "Ambientes estructurados", "Entrenamiento de funciones ejecutivas", "Evaluación neuropsicológica"]
     ),
 
     // ESQUIZOFRENIA CATATÓNICA
@@ -66,6 +114,24 @@ export class DiagnosisService {
       "El mutismo implica una ausencia total del habla, aunque la persona sea capaz de hablar físicamente.",
       ["Evaluación neurológica y psiquiátrica", "Terapia del lenguaje", "Terapia de estimulación", "Farmacoterapia"]
     ),
+    new DiagnosisInformation(
+      "Esquizofrenia_catatónica",
+      "Psiquiatría",
+      "La hipoexpresividad emocional, la expresión facial reducida y el contacto visual bajo son síntomas negativos comunes en la esquizofrenia catatónica.",
+      ["Terapia ocupacional", "Rehabilitación funcional", "Estimulación emocional", "Seguimiento continuo"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_catatónica",
+      "Psiquiatría",
+      "La falta de iniciativa para la higiene personal y la participación en actividades básicas indica abulia, frecuente en la esquizofrenia catatónica.",
+      ["Rutinas estructuradas", "Terapia ocupacional", "Supervisión diaria", "Apoyo familiar"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_catatónica",
+      "Psiquiatría",
+      "La pérdida de interés por las relaciones sociales, el ocio o la sexualidad se considera una forma de anhedonia profunda.",
+      ["Terapia de activación conductual", "Reforzamiento positivo", "Intervención psicosocial", "Grupos motivacionales"]
+    ),
 
     // ESQUIZOFRENIA INDEFERENCIADA
     new DiagnosisInformation(
@@ -86,6 +152,30 @@ export class DiagnosisService {
       "La variabilidad de síntomas hace referencia a la aparición de diferentes síntomas positivos y negativos sin una predominancia clara.",
       ["Análisis de historial clínico", "Ajustes terapéuticos periódicos", "Terapia integral", "Red de apoyo"]
     ),
+    new DiagnosisInformation(
+      "Esquizofrenia_indiferenciada",
+      "Psiquiatría",
+      "La dificultad para concentrarse afecta múltiples áreas funcionales y es uno de los síntomas cognitivos más incapacitantes.",
+      ["Ambiente estructurado", "Ejercicios de atención", "Terapia cognitiva", "Adaptaciones escolares o laborales"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_indiferenciada",
+      "Psiquiatría",
+      "Los síntomas afectivos como tristeza, culpa, alteraciones del sueño, apetito y fatiga, pueden coexistir en este subtipo.",
+      ["Evaluación para depresión comórbida", "Terapia de apoyo", "Psicoterapia", "Monitoreo clínico"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_indiferenciada",
+      "Psiquiatría",
+      "La preocupación excesiva, el nerviosismo y los pensamientos intrusivos se asocian con ansiedad comórbida frecuente.",
+      ["Terapia cognitivo-conductual", "Reducción del estrés", "Mindfulness", "Tratamiento ansiolítico"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_indiferenciada",
+      "Psiquiatría",
+      "Síntomas físicos como taquicardia, sudoración, temblores o disnea pueden indicar ansiedad o episodios de pánico.",
+      ["Técnicas de relajación", "Ejercicios respiratorios", "Apoyo psicoterapéutico", "Atención médica general"]
+    ),
 
     // ESQUIZOFRENIA RESIDUAL
     new DiagnosisInformation(
@@ -99,6 +189,12 @@ export class DiagnosisService {
       "Psiquiatría",
       "La presencia de síntomas negativos incluye afecto plano, alogia y anhedonia, que persisten incluso cuando los síntomas positivos han desaparecido.",
       ["Intervenciones psicosociales", "Estimulación cognitiva", "Tratamientos antipsicóticos de mantenimiento", "Grupos de apoyo"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia_residual",
+      "Psiquiatría",
+      "Las ideas suicidas representan un riesgo elevado en pacientes con síntomas residuales de tipo depresivo o crónico.",
+      ["Atención urgente", "Supervisión familiar o institucional", "Intervención intensiva", "Evaluación de riesgo"]
     ),
     new DiagnosisInformation(
       "Esquizofrenia_residual",

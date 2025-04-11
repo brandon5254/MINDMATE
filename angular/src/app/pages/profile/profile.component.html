@@ -48,7 +48,7 @@
                 <form class="example-form">
                     <div class="grid grid-cols-2 gap-2">
                         <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label>Full Name</mat-label>
+                            <mat-label>Nombre Completo</mat-label>
                             <input matInput [(ngModel)]="name" name="name">
                         </mat-form-field>
                         <mat-form-field class="example-full-width" appearance="fill">
@@ -82,17 +82,17 @@
                             <mat-error class="warn" *ngIf="weightControl.errors?.['max']">Maximum height is 300.</mat-error>
                         </mat-form-field>
                     </div>
-                    <button mat-raised-button color="accent" (click)="saveAccountDetails(name, gender, birthday, phoneNumber, height, weight)" [disabled]="weightControl.errors || heightControl.errors">Save Changes</button>
+                    <button mat-raised-button color="accent" (click)="saveAccountDetails(name, gender, birthday, phoneNumber, height, weight)" [disabled]="weightControl.errors || heightControl.errors">Guardar Cambios</button>
 
                 </form>
             </div>
         </div>
     
-        <div *ngIf="userRole == 'patient'" class="documents rounded-xl border-2">
-            <h1 class="card-header title text-center">Documents</h1>
+        <div *ngIf="userRole == 'patient'" class="documentos rounded-xl border-2">
+            <h1 class="card-header title text-center">Documentos</h1>
             <div class="p-6">
                 <div class="flex justify-center">
-                    <button mat-raised-button color="accent" (click)="fileInput.click()">Upload New File</button>
+                    <button mat-raised-button color="accent" (click)="fileInput.click()">Subir Nuevo Archivo</button>
                     <input hidden (change)="uploadFile($event)" #fileInput type="file" id="file">
                 </div>
                 <div *ngIf="fileLoading" class="flex justify-center m-6">
@@ -112,36 +112,37 @@
         </div>
 
         <div *ngIf="userRole == 'patient'" class="medicalHistory col-span-2 rounded-xl border-2">
-            <h1 class="card-header title text-center">Medical History</h1>
+            <h1 class="card-header title text-center">Historial médico
+            </h1>
             <div class="p-6">
                 <form class="example-form">
 
-                    <p>What are your medical and surgical histories? Please specify.</p>
+                    <p>¿Cuáles son sus antecedentes médicos y quirúrgicos? Por favor, especifique..</p>
                     <mat-form-field class="w-full" appearance="fill">
                         <textarea name="question1" [(ngModel)]="question1" matInput></textarea>
                     </mat-form-field>
 
-                    <p>Do you take prescription or non-prescription medications? If yes, please specify.</p>
+                    <p>¿Toma medicamentos con o sin receta? Si es así, por favor especifique.</p>
                     <mat-form-field class="w-full" appearance="fill">
                         <textarea name="question2" [(ngModel)]="question2" matInput></textarea>
                     </mat-form-field>
 
-                    <p>Do you have any allergies? If yes, please specify.</p>
+                    <p>¿Tiene alguna alergia? Si es así, por favor, especifíquela.</p>
                     <mat-form-field class="w-full" appearance="fill">
                         <textarea name="question3" [(ngModel)]="question3" matInput></textarea>
                     </mat-form-field>
 
-                    <p>What is your smoking, alcohol, and illicit drug use history? Please specify.</p>
+                    <p>¿Cuál es su historial de consumo de tabaco, alcohol y drogas ilegales? Por favor, especifique.</p>
                     <mat-form-field class="w-full" appearance="fill">
                         <textarea name="question4" [(ngModel)]="question4" matInput></textarea>
                     </mat-form-field>
 
-                    <p>Is there any diagnosed disease in your family? If yes, please specify.</p>
+                    <p>¿Hay alguna enfermedad diagnosticada en su familia? En caso afirmativo, por favor, especifique.</p>
                     <mat-form-field class="w-full" appearance="fill">
                         <textarea name="question5" [(ngModel)]="question5" matInput></textarea>
                     </mat-form-field>
                     <br/>
-                    <button mat-raised-button color="accent" (click)="saveMedicalHistory(question1, question2, question3, question4, question5)">Save Changes</button>
+                    <button mat-raised-button color="accent" (click)="saveMedicalHistory(question1, question2, question3, question4, question5)">Guardar Cambios</button>
                 </form>
 
             </div>
