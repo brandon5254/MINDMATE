@@ -203,7 +203,7 @@ export class ProfileComponent implements OnInit {
         panelClass: ['mat-toolbar', 'mat-primary'],
       });
     }).catch((error) => {
-      console.error('Error saving account details:', error);
+      console.error('Error saving Detalles De La Cuenta:', error);
     });
   }
   
