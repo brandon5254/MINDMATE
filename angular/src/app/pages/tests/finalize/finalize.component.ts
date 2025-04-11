@@ -18,7 +18,7 @@ export class FinalizeComponent implements OnInit {
   
   myControl = new FormControl();
 
-  diagnoses: string[] = ["Alucinaciones","Ideas delirantes","Control del pensamiento","Obsesiones de presencia","Desorganización del pensamiento","Lenguaje desorganizado","Catatonía","Paranoia intensa","Comportamiento motor desorganizado","Dificultades en teoría de la mente","Eco del pensamiento","Comportamiento social inadecuado","Hipoexpresividad emocional","Expresión facial reducida","Gesticulación reducida","Contacto visual bajo","Afectividad inapropiada","Alogia","Alogia - pobreza del habla","Alogia - pobreza de contenido","Alogia - bloqueos del pensamiento","Abulia","Abulia - higiene","Abulia - trabajo o estudio","Anergia física","Anhedonia","Anhedonia - sociabilidad","Anhedonia - intereses recreativos","Anhedonia - intereses sexuales","Anhedonia - relaciones con amigos", "Anhedonia - relaciones con la familia","Deterioro de la memoria","Deterioro de la atención","Déficit en el procesamiento de la información","Tristeza","Sentimiento de culpa","Cambios en el apetito","Sueño o fatiga","Disminución del libido","Dificultad de concentración","Ideas suicidas","Preocupación","Nerviosismo", "Pensamientos intrusivos","Taquicardia","Sudoración","Temblores","Disnea","Hipervigilancia","Irritabilidad",];
+  diagnoses: string[] = ["Esquizofrenia paranoide","Esquizofrenia desorganizada","Esquizofrenia catatónica","Esquizofrenia indiferenciada","Esquizofrenia residual"];
   currentTest = new Map<string, Test>();
   currentPatientName!: string;
   currentDate!: number;
