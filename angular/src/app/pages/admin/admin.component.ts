@@ -29,8 +29,7 @@ export class AdminComponent implements AfterViewInit {
   password: string = "";
   confirmPassword: string = "";
   selectedDepartment: string = "";  
-  departments: string[] = ["Dermatology", "Immunology", "Gastroenterology", "Internal Diseases", "Endocrinology", "Chest Diseases", "Neurology",
-  "Rheumatology", "Infectious Diseases", "General Surgery", "Cardiology"];
+  departments: string[] = ["Psiquiatría"];
 
   @ViewChild('paginatorDoctors') paginatorDoctors!: MatPaginator;
   @ViewChild('sortDoctors') sortDoctors!: MatSort;

@@ -22,7 +22,7 @@ def train():
     parameters = request.get_json()
 
     # Cargamos el dataset principal con enfermedades y síntomas
-    df = pd.read_csv('./model/dataset5.csv')
+    df = pd.read_csv('./model/esquizofrenia_dataset8.csv')
 
     # Limpiamos los datos eliminando espacios en blanco
     cols = df.columns
@@ -111,11 +111,13 @@ def train():
     # Convertimos el diccionario a formato JSON
     json_string = json.dumps(Dictionary)
 
+
     # Guardamos el modelo entrenado en un archivo para su uso posterior
-    joblib.dump(model, './model/model.pkl')
+    joblib.dump(model, '../model/model.pkl')
 
     # Devolvemos los resultados en formato JSON
     return json.dumps(Dictionary, indent=4)
+
 
 # Ejecutamos la aplicación Flask en el puerto 5001
 if __name__ == '__main__':

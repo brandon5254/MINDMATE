@@ -13,8 +13,7 @@ import { TestsService } from 'src/app/service/tests.service';
 })
 export class DepartmentComponent implements OnInit {
 
-  departments: string[] = ["Dermatology", "Immunology", "Gastroenterology", "Internal Diseases", "Endocrinology", "Chest Diseases", "Neurology",
-"Rheumatology", "Infectious Diseases", "General Surgery", "Cardiology"];
+  departments: string[] = ["Psiquiatría"];
   myControl = new FormControl();
   selectedDepartment: string = "";
   filteredDepartments!: Observable<string[]>;
