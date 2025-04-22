@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: tdsk-flask
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    workingDir: tdsk-flask
+    autoDeploy: true
+
+  - type: web
+    name: angular
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build --prod
+    startCommand: serve -s dist/angular
+    workingDir: angular
+    autoDeploy: true
+
