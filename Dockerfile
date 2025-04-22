@@ -1,47 +1,29 @@
-# Etapa 1: Construir el proyecto Angular
-FROM node:16 AS angular-build
+# Etapa 1: Build de Angular
+FROM node:18 as build-frontend
 
-# Establece el directorio de trabajo para Angular
+WORKDIR /app
+COPY angular/ ./angular/
 WORKDIR /app/angular
 
-# Copia los archivos de Angular y las dependencias
-COPY ./angular/package*.json ./
 RUN npm install
-COPY ./angular ./
 RUN npm run build --prod
 
-# Etapa 2: Configuración del servidor Flask con Gunicorn
-FROM python:3.9-slim AS flask
+# Etapa 2: Backend con Flask
+FROM python:3.10-slim
 
-# Establece el directorio de trabajo para Flask
-WORKDIR /app/flask
+WORKDIR /app
 
-# Copia los archivos de la aplicación Flask
-COPY ./tdsk-flask/requirements.txt ./
+# Instalar dependencias del sistema (si es necesario)
+RUN apt-get update && apt-get install -y build-essential && rm -rf /var/lib/apt/lists/*
+
+# Copiar archivos del backend
+COPY . .
+
+# Instalar dependencias Python
 RUN pip install --no-cache-dir -r requirements.txt
-COPY ./tdsk-flask ./
 
-# Configura variables de entorno de Flask
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
+# Copiar los archivos compilados de Angular al folder estático de Flask
+COPY --from=build-frontend /app/angular/dist/angular/ ./tdsk-flask/static/
 
-# Etapa 3: Servir el frontend Angular con Nginx y configurar Flask
-FROM nginx:alpine
-
-# Copia los archivos de Angular construidos por la etapa anterior al directorio adecuado de Nginx
-COPY --from=angular-build /app/angular/dist/ /usr/share/nginx/html
-
-# Copia la configuración personalizada de Nginx
-COPY ./nginx.conf /etc/nginx/nginx.conf
-
-# Copia los archivos de Flask para Gunicorn
-COPY --from=flask /app/flask /app/flask
-
-# Expone el puerto 80 para Nginx
-EXPOSE 80
-
-# Expone el puerto 5000 para Flask
-EXPOSE 5000
-
-# Inicia Nginx y Gunicorn en paralelo
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:5000 tdsk-flask.app:app & nginx -g 'daemon off;'"]
+# Comando para producción con Gunicorn
+CMD ["gunicorn", "tdsk-flask.app:app", "--bind", "0.0.0.0:8000"]
