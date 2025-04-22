@@ -1,49 +1,47 @@
-# Etapa 1: Crear la imagen para Angular
-FROM node:16-alpine as angular-build
+# Etapa 1: Construir el proyecto Angular
+FROM node:16 AS angular-build
 
-# Establece el directorio de trabajo dentro del contenedor
-WORKDIR /app
+# Establece el directorio de trabajo para Angular
+WORKDIR /app/angular
 
-# Copia los archivos del proyecto Angular al contenedor
-COPY ./angular /app/
-
-# Instala las dependencias de Angular
+# Copia los archivos de Angular y las dependencias
+COPY ./angular/package*.json ./
 RUN npm install
-
-# Construir la aplicación Angular para producción
+COPY ./angular ./
 RUN npm run build --prod
 
-# Etapa 2: Crear la imagen para Flask
-FROM python:3.9-slim as flask-build
+# Etapa 2: Configuración del servidor Flask con Gunicorn
+FROM python:3.9-slim AS flask
 
-# Establece el directorio de trabajo dentro del contenedor
-WORKDIR /app
+# Establece el directorio de trabajo para Flask
+WORKDIR /app/flask
 
-# Copia los archivos del proyecto Flask al contenedor
-COPY ./tdsk-flask /app/
-
-# Instala las dependencias del proyecto Flask
+# Copia los archivos de la aplicación Flask
+COPY ./tdsk-flask/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+COPY ./tdsk-flask ./
 
-# Configura las variables de entorno de Flask
+# Configura variables de entorno de Flask
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Instala Gunicorn para ejecutar Flask
-RUN pip install gunicorn
-
-# Etapa 3: Crear la imagen final con Nginx y Flask + Angular
+# Etapa 3: Servir el frontend Angular con Nginx y configurar Flask
 FROM nginx:alpine
 
-# Instalar dependencias de Python y Gunicorn para Flask
-COPY --from=flask-build /app /app
-COPY --from=angular-build /app/dist /usr/share/nginx/html
+# Copia los archivos de Angular construidos por la etapa anterior al directorio adecuado de Nginx
+COPY --from=angular-build /app/angular/dist/ /usr/share/nginx/html
 
-# Copia la configuración personalizada de Nginx para redirigir las peticiones
-COPY nginx.conf /etc/nginx/nginx.conf
+# Copia la configuración personalizada de Nginx
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-# Exponer puertos
-EXPOSE 80 5000
+# Copia los archivos de Flask para Gunicorn
+COPY --from=flask /app/flask /app/flask
 
-# Comando para iniciar ambos servicios: Flask y Nginx
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:5000 app:app & nginx -g 'daemon off;'"]
+# Expone el puerto 80 para Nginx
+EXPOSE 80
+
+# Expone el puerto 5000 para Flask
+EXPOSE 5000
+
+# Inicia Nginx y Gunicorn en paralelo
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:5000 tdsk-flask.app:app & nginx -g 'daemon off;'"]
