@@ -15,6 +15,7 @@ export class DiagnosisService {
       ["Buscar evaluación psiquiátrica", "Evitar situaciones estresantes", "Considerar tratamiento antipsicótico", "Participar en terapia"]
     ),
     new DiagnosisInformation(
+<<<<<<< Updated upstream
       "Esquizofrenia_paranoide",
       "Psiquiatría",
       "Las ideas delirantes implican mantener creencias falsas con firmeza a pesar de la evidencia clara en contra, como pensar que otros conspiran en su contra.",
@@ -202,16 +203,74 @@ export class DiagnosisService {
       "El deterioro funcional se manifiesta como dificultad para llevar una vida autónoma, mantener relaciones o trabajar, a pesar de la ausencia de síntomas psicóticos agudos.",
       ["Terapia ocupacional", "Planificación de vida asistida", "Apoyo familiar continuo", "Rehabilitación vocacional"])
   ]
+=======
+      "Esquizofrenia paranoide",
+      "Psiquiatría",
+      "Caracterizada por delirios paranoides o alucinaciones auditivas. Los pacientes pueden presentar ideas de persecución o grandeza.",
+      ["Consultar con psiquiatra", "Seguir tratamiento farmacológico", "Evitar situaciones de estrés", "Asistir a controles regulares"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia desorganizada",
+      "Psiquiatría",
+      "Forma de esquizofrenia donde predominan el lenguaje y comportamiento desorganizado, y afecto inapropiado.",
+      ["Apoyo terapéutico", "Supervisión familiar constante", "Cumplimiento de medicación", "Evaluación neurológica frecuente"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia catatónica",
+      "Psiquiatría",
+      "Tipo raro que involucra alteraciones motoras extremas: inmovilidad, rigidez o movimientos repetitivos sin propósito.",
+      ["Hospitalización si es necesario", "Monitoreo de signos vitales", "Terapia farmacológica intensiva", "Terapia física supervisada"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia indiferenciada",
+      "Psiquiatría",
+      "Diagnóstico utilizado cuando los síntomas no encajan claramente en otros subtipos específicos.",
+      ["Evaluación psiquiátrica completa", "Tratamiento multidisciplinario", "Acompañamiento psicológico", "Monitoreo frecuente"]
+    ),
+    new DiagnosisInformation(
+      "Esquizofrenia residual",
+      "Psiquiatría",
+      "Presenta síntomas negativos persistentes con escasa actividad psicótica.",
+      ["Rehabilitación psicosocial", "Terapia ocupacional", "Seguimiento ambulatorio", "Apoyo familiar"]
+    ),
+    new DiagnosisInformation(
+      "Trastorno esquizoafectivo",
+      "Psiquiatría",
+      "Condición que combina síntomas de esquizofrenia y trastornos del estado de ánimo como depresión o manía.",
+      ["Evaluación psiquiátrica integral", "Tratamiento combinado (antipsicóticos y antidepresivos)", "Psicoterapia cognitiva", "Evitar consumo de sustancias"]
+    ),
+    new DiagnosisInformation(
+      "Trastorno psicótico breve",
+      "Psiquiatría",
+      "Episodio de síntomas psicóticos que dura menos de un mes y se resuelve completamente.",
+      ["Reposo supervisado", "Apoyo emocional", "Evitar situaciones estresantes", "Terapia de seguimiento"]
+    ),
+    new DiagnosisInformation(
+      "Trastorno delirante",
+      "Psiquiatría",
+      "Caracterizado por la presencia de una o más creencias falsas (delirios) persistentes durante al menos un mes.",
+      ["Consulta especializada", "Terapia cognitivo-conductual", "Farmacoterapia antipsicótica", "Psicoeducación familiar"]
+    ),
+    new DiagnosisInformation(
+      "Trastorno esquizofreniforme",
+      "Psiquiatría",
+      "Presenta síntomas similares a la esquizofrenia, pero de duración menor a seis meses.",
+      ["Iniciar tratamiento precoz", "Seguimiento mensual", "Evaluación del estado mental", "Educación sobre síntomas"]
+    ),
+    new DiagnosisInformation(
+      "Trastorno psicótico compartido",
+      "Psiquiatría",
+      "Trastorno en el que una persona desarrolla un delirio inducido por otra con trastorno psicótico.",
+      ["Separar a las personas involucradas", "Intervención psiquiátrica", "Terapia familiar", "Supervisión constante"]
+    )
+  ];
+>>>>>>> Stashed changes
 
   constructor() { }
 
-    getDiagnosisInformation(diagnosisName: string) : DiagnosisInformation{
-      var result = this.diagnosisList.find( el => el.name == diagnosisName.trimEnd());
-
-      if(result != null)
-        return result;
-      else
-        return new DiagnosisInformation("","","",[]);
-    }
-
+  getDiagnosisInformation(diagnosisName: string): DiagnosisInformation {
+    const result = this.diagnosisList.find(el => el.name === diagnosisName.trimEnd());
+    return result ?? new DiagnosisInformation("", "", "", []);
   }
+
+}

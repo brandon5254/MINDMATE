@@ -11,7 +11,11 @@ import json
 import joblib
 
 # read data set
+<<<<<<< Updated upstream
 df = pd.read_csv('./model/esquizofrenia_dataset8.csv')  
+=======
+df = pd.read_csv('./model/dataset5.csv')  
+>>>>>>> Stashed changes
 
 cols = df.columns
 data = df[cols].values.flatten()

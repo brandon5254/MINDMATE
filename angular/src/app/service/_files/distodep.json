@@ -1,4 +1,5 @@
 [
+<<<<<<< Updated upstream
   { "disease": "Esquizofrenia_paranoide", "department": "Psiquiatría" },
   { "disease": "Esquizofrenia_desorganizada", "department": "Psiquiatría" },
   { "disease": "Esquizofrenia_catatónica", "department": "Psiquiatría" },
@@ -6,3 +7,17 @@
   { "disease": "Esquizofrenia_residual", "department": "Psiquiatría" }
 ]
 
+=======
+    { "disease": "Esquizofrenia paranoide", "department": "Psiquiatría" },
+    { "disease": "Esquizofrenia desorganizada", "department": "Psiquiatría" },
+    { "disease": "Esquizofrenia catatónica", "department": "Psiquiatría" },
+    { "disease": "Esquizofrenia indiferenciada", "department": "Psiquiatría" },
+    { "disease": "Esquizofrenia residual", "department": "Psiquiatría" },
+    { "disease": "Trastorno esquizoafectivo", "department": "Psiquiatría" },
+    { "disease": "Trastorno psicótico breve", "department": "Psiquiatría" },
+    { "disease": "Trastorno delirante", "department": "Psiquiatría" },
+    { "disease": "Trastorno esquizofreniforme", "department": "Psiquiatría" },
+    { "disease": "Trastorno psicótico compartido", "department": "Psiquiatría" }
+  ]
+  
+>>>>>>> Stashed changes
