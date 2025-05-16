@@ -37,6 +37,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { Patient } from './models/patient';
 import { Doctor } from './models/doctor';
 
+
+
 const routes: Routes = [
   {
     path: '',

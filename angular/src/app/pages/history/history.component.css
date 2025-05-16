@@ -4,56 +4,44 @@
     flex-direction: column;
     align-items: center;
     margin: 12px;
-    max-width:none!important;
+    max-width: none !important;
 }
 
 .title {
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #1d3557;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
 }
 
 /* #region ANIMATIONS */
 
-
-
 .read {
-
     animation-name: example;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
 @keyframes example {
-    0%   {background-color: #c8e0de;}
-    50%  {background-color: white;}
-    100% {background-color: #c8e0de;}
-  }
+    0%   {background-color: #e0f7fa;}
+    50%  {background-color: #fff;}
+    100% {background-color: #e0f7fa;}
+}
 
 /* #endregion */
 
-
-
 /* #region TABLE */
 
-::ng-deep .mat-tab-body-content{
-    overflow: hidden!important;
-    height: auto!important;
+.clickableText {
+    cursor: pointer;
+    color: #1890ff;
+    transition: text-shadow 0.2s, color 0.2s;
 }
 
-::ng-deep .mat-sort-header-container, .mat-header-cell{
-    text-align: center;
-    justify-content: center;
-}
-
-::ng-deep td, th{
-    padding: 16px!important;
-}
-
-.clickableText{
-    cursor: pointer!important;
-}
-
-.clickableText:hover{
-    text-shadow: 1px 1px #251d4b9b;
+.clickableText:hover {
+    text-shadow: 1px 1px #1890ff33;
+    color: #40a9ff;
 }
 
 .actionbuttons {
@@ -63,20 +51,35 @@
     align-content: center;
 }
 
-.finalized {
-    background-color: rgb(207, 245, 207);
+/* NG-ZORRO tag colors for status */
+.nz-tag-green, .finalized {
+    background: #f6ffed !important;
+    border-color: #b7eb8f !important;
+    color: #389e0d !important;
+}
+.nz-tag-gold, .inProgress {
+    background: #fffbe6 !important;
+    border-color: #ffe58f !important;
+    color: #d48806 !important;
+}
+.nz-tag-red, .pending, .canceled {
+    background: #fff1f0 !important;
+    border-color: #ffa39e !important;
+    color: #cf1322 !important;
 }
 
-.inProgress {
-    background-color: rgb(247, 241, 195);
+/* Table improvements */
+table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+th, td {
+    text-align: center;
+    padding: 12px 8px;
 }
 
-.pending {
-    background-color: rgb(253, 215, 215);
-}
-
-.canceled {
-    background-color: rgb(253, 215, 215);
-}
+/* Remove Angular Material deep selectors */
 
 /* #endregion */

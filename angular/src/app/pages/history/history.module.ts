@@ -23,7 +23,15 @@ import { NgxMaterialRatingModule } from 'ngx-material-rating';
 import { RateComponent } from './rate/rate.component';
 import { RemoveComponent } from './remove/remove.component';
 
-// importing classes that is needed for history page
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
+import { NzInputGroupComponent } from 'ng-zorro-antd/input';
 
 @NgModule({
   imports: [
@@ -44,7 +52,14 @@ import { RemoveComponent } from './remove/remove.component';
     MatInputModule,
     MatSortModule,
     MatIconModule,
-
+    NzTableModule,
+    NzTabsModule,
+    NzInputModule,
+    NzBadgeModule,
+    NzIconModule,
+    NzButtonModule,
+    NzTagModule,
+    NzEmptyModule,
   ],
   declarations: [HistoryComponent, ChatComponent, RateComponent, RemoveComponent]
 })

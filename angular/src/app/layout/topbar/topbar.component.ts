@@ -72,11 +72,14 @@ export class TopbarComponent implements OnInit {
     }
   }
 
-  menuOpened() {
-    setTimeout(() => {
-      this.inputElement!.nativeElement.focus();
-    }, 0);
-  }
+ menuOpened() {
+  setTimeout(() => {
+    if (this.inputElement) {
+      this.inputElement.nativeElement.focus();
+    }
+  }, 0);
+}
+
 
   logoutUser() {
     this._authService.logout();
