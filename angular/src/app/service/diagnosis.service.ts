@@ -206,7 +206,6 @@ export class DiagnosisService {
 
   constructor() { }
 
-      else
   getDiagnosisInformation(diagnosisName: string): DiagnosisInformation {
     var result = this.diagnosisList.find(el => el.name == diagnosisName.trimEnd());
 
