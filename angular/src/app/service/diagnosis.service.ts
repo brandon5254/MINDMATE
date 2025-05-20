@@ -7,8 +7,8 @@ import { DiagnosisInformation } from '../models/diagnosisInformation';
 export class DiagnosisService {
 
   diagnosisList = [
-     // ESQUIZOFRENIA PARANOIDE
-     new DiagnosisInformation(
+    // ESQUIZOFRENIA PARANOIDE
+    new DiagnosisInformation(
       "Esquizofrenia_paranoide",
       "Psiquiatría",
       "Las alucinaciones son percepciones sensoriales falsas, como escuchar voces o ver cosas que no están presentes. Son un síntoma común de la esquizofrenia y pueden afectar significativamente el funcionamiento diario.",
@@ -203,15 +203,16 @@ export class DiagnosisService {
       ["Terapia ocupacional", "Planificación de vida asistida", "Apoyo familiar continuo", "Rehabilitación vocacional"])
   ]
 
+
   constructor() { }
 
-    getDiagnosisInformation(diagnosisName: string) : DiagnosisInformation{
-      var result = this.diagnosisList.find( el => el.name == diagnosisName.trimEnd());
+  getDiagnosisInformation(diagnosisName: string): DiagnosisInformation {
+    var result = this.diagnosisList.find(el => el.name == diagnosisName.trimEnd());
 
-      if(result != null)
-        return result;
-      else
-        return new DiagnosisInformation("","","",[]);
-    }
-
+    if (result != null)
+      return result;
+    else
+      return new DiagnosisInformation("", "", "", []);
   }
+
+}

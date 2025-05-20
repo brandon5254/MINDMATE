@@ -20,7 +20,8 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "types": ["node"] // Specify only the needed types, e.g., "node", "jest", etc.
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
