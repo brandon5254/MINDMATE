@@ -40,7 +40,7 @@ def get_result():
             'value': round(prediction_proba[0][i] * 100, 2)
         })
 
-    print("Resultados:", results)  # 👈 esto muestra lo que va a devolver
+    print("Resultados:", results)  # 
     return jsonify(results)
 
 

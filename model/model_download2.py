@@ -4,11 +4,11 @@ import json
 # Cargar el modelo previamente entrenado
 model = joblib.load("./model/random_forest.joblib")
 
-# Cargar los síntomas que el modelo espera (100 columnas en orden)
+# Cargar los síntomas que el modelo 
 with open("./model/symptom_columns.json", "r", encoding="utf-8") as f:
     expected_symptoms = json.load(f)
 
-# Síntomas seleccionados por el usuario (puedes modificar esta lista)
+# Síntomas seleccionados por el usuario opcional se puede modificar esta lista
 user_symptoms = [
     "alucinaciones",
     "catatonía",

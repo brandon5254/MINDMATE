@@ -24,7 +24,7 @@
         "@angular/router": "~13.2.0",
         "@googlemaps/js-api-loader": "^1.14.3",
         "angular": "^1.6.10",
-        "firebase": "^9.17.2",
+        "firebase": "^9.22.2",
         "mapbox-gl": "^2.8.2",
         "ngx-material-rating": "^2.0.0",
         "ngx-range": "^1.1.0",
