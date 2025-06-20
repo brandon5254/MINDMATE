@@ -17,11 +17,11 @@
                             <b>Nombre Completo</b><br>
                             <span>{{currentUser.fullname}}</span>
                         </div>
-                    </mat-grid-tile> 
+                    </mat-grid-tile>
                     <mat-grid-tile>
                         <div appearance="fill" class="w-full">
                             <b>Phone Number</b><br>
-                            <span>{{ (currentUser.phoneNumber) ? currentUser.phoneNumber : '-' }}</span> 
+                            <span>{{ (currentUser.phoneNumber) ? currentUser.phoneNumber : '-' }}</span>
                         </div>
                     </mat-grid-tile>
                     <mat-grid-tile>
@@ -29,25 +29,27 @@
                             <b>Gender</b><br>
                             <span>{{ (currentUser.gender) ? currentUser.gender : '-' }}</span>
                         </div>
-                    </mat-grid-tile> 
+                    </mat-grid-tile>
                     <mat-grid-tile>
                         <div appearance="fill" class="w-full">
                             <b>Birth Year</b><br>
                             <span>{{ (currentUser.birthday) ? currentUser.birthday : '-' }}</span>
                         </div>
                     </mat-grid-tile>
-                    <mat-grid-tile>
-                        <div appearance="fill" class="w-full">
-                            <b>Height</b><br>
-                            <span>{{ (currentUser.height) ? currentUser.height : '-' }}</span>
-                        </div>
-                    </mat-grid-tile> 
-                    <mat-grid-tile>
-                        <div appearance="fill" class="w-full">
-                            <b>Weight</b><br>
-                            <span>{{ (currentUser.weight) ? currentUser.weight : '-'}}</span>
-                        </div>
-                    </mat-grid-tile>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>height</mat-label>
+                        <input matInput [(ngModel)]="currentUser.height" readonly>
+                        <span matSuffix>cm</span>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>weight</mat-label>
+                        <input matInput [(ngModel)]="currentUser.weight" readonly>
+                        <span matSuffix>kg</span>
+                    </mat-form-field>
+
+
+
                 </mat-grid-list>
             </div>
         </div>
@@ -67,31 +69,33 @@
             </ng-template>
         </div>
         <div class="medicalHistory col-span-2 rounded-xl border-2">
-            <h1 class="card-header text-center" >Historial médico</h1>
+            <h1 class="card-header text-center">Historial médico</h1>
             <div class="p-6 col">
                 <div *ngIf="currentMedicalHistory">
                     <div *ngIf="currentMedicalHistory.question1">
                         <b>¿Cuáles son sus antecedentes médicos y quirúrgicos? Por favor, especifique..</b><br>
                         <span> {{ currentMedicalHistory.question1 }} </span><br><br>
                     </div>
-                        
+
                     <div *ngIf="currentMedicalHistory.question2">
                         <b>¿Toma medicamentos con o sin receta? Si es así, por favor especifique.</b><br>
                         <span> {{ currentMedicalHistory.question2 }} </span><br><br>
                     </div>
-                        
+
                     <div *ngIf="currentMedicalHistory.question3">
                         <b>¿Tiene alguna alergia? Si es así, por favor, especifíquela.</b><br>
                         <span> {{ currentMedicalHistory.question3 }} </span><br><br>
                     </div>
-                        
+
                     <div *ngIf="currentMedicalHistory.question4">
-                        <b>¿Cuál es su historial de consumo de tabaco, alcohol y drogas ilegales? Por favor, especifique.</b><br>
+                        <b>¿Cuál es su historial de consumo de tabaco, alcohol y drogas ilegales? Por favor,
+                            especifique.</b><br>
                         <span> {{ currentMedicalHistory.question4 }} </span><br><br>
                     </div>
 
                     <div *ngIf="currentMedicalHistory.question5">
-                        <b>¿Hay alguna enfermedad diagnosticada en su familia? En caso afirmativo, por favor, especifique.</b><br>
+                        <b>¿Hay alguna enfermedad diagnosticada en su familia? En caso afirmativo, por favor,
+                            especifique.</b><br>
                         <span> {{ currentMedicalHistory.question5 }} </span>
                     </div>
                 </div>
@@ -99,12 +103,12 @@
                     <p>{{currentUser.fullname}} no tiene un Historial médico
                         .</p>
                 </div>
-                
+
             </div>
-        </div>        
+        </div>
     </div>
-    
-    
+
+
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">

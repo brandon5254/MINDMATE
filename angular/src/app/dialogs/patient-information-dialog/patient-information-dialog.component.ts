@@ -8,6 +8,7 @@ import { UserService } from 'src/app/service/user.service';
 import { AngularFireStorage } from "@angular/fire/compat/storage";
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-patient-information-dialog',
   templateUrl: './patient-information-dialog.component.html',
@@ -41,6 +42,7 @@ export class PatientInformationDialogComponent implements OnInit {
     
     this._medicalHistoryService.getMedicalHistory(this.data.patientID).valueChanges().subscribe( data => {
       this.currentMedicalHistory = data as MedicalHistory
+      
     });
   }
 
@@ -57,8 +59,10 @@ export class PatientInformationDialogComponent implements OnInit {
         data?.birthday as string, 
         data?.phoneNumber as string, 
         data?.profilePicture as string,
-        data?.height as string, 
-        data?.weight as string);
+        String(Number(data?.height)), 
+        String(Number(data?.weight))
+      );
+      console.log('Current User:', this.currentUser);
 
         this.storage.storage.ref(this.currentUser.profilePicture).getDownloadURL().then(
           (url: string) => {
